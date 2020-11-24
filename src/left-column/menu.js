@@ -14,7 +14,7 @@ function Menu(props) {
   return (
     <div className="Menu">
       <div class="wrapper" /* onMouseOver={mouseOver} onMouseLeave={mouseLeave} */>
-        <span className={`icon icon-${props.icon}`}></span>
+        <i className={`icon icon-${props.icon}`}></i>
         <span className="title">{props.title}</span>
       </div>
     </div>

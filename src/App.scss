@@ -55,8 +55,26 @@
   }
   main{
     display: flex;
+    .PageTop{
+      padding: 0px 15px;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      border-bottom: 1px solid rgb(235, 238, 240);
+      .text{
+        font-size: 1.2em;
+        font-weight: 800;
+        display: inline;
+      }
+      .right-icon{
+        float: right;
+        display: inline;
+      }
+    }
     .main{
       width: 740px;
+      border-right: 1px solid rgb(235, 238, 240);
+      border-left: 1px solid rgb(235, 238, 240);
+      
     }
     .right-side{
       width: 250px;
@@ -64,32 +82,36 @@
   }
 }
 
-span.icon{
+i.icon{
   width: 25px;
   height: 25px;
+  display: inline-block;
 }
-span.icon-bell{
+i.icon-bell{
   background-image: url(./icons/bell.svg);
 }
-span.icon-mail{
+i.icon-mail{
   background-image: url(./icons/mail.svg);
 }
-span.icon-bookmark{
+i.icon-bookmark{
   background-image: url(./icons/bookmark.svg);
 }
-span.icon-list{
+i.icon-list{
   background-image: url(./icons/lists.svg);
 }
-span.icon-home{
+i.icon-home{
   background-image: url(./icons/home.svg);
 }
-span.icon-more-dots{
+i.icon-more-dots{
   background-image: url(./icons/more-dots.svg);
 }
-span.icon-hashtag{
+i.icon-hashtag{
   background-image: url(./icons/hashtag.svg);
 }
-span.icon-user{
+i.icon-user{
   background-image: url(./icons/user.svg);
+}
+i.icon-spark{
+  background-image: url(./icons/spark.svg);
 }
 

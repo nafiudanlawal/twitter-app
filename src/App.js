@@ -2,12 +2,14 @@
 import "./App.scss";
 import { ReactComponent as Logo }from "./bird.svg";
 import Menu from "./left-column/menu";
+import PageTop from "./main_components/PageHeader";
+
 
 function App() {
   return (
     <div className="App">
+
       <header>
-        
         <div id="left-menus">
           <ul className="list-group">
             <li>
@@ -28,6 +30,7 @@ function App() {
       </header>
       <main>
         <div className="main">
+          <PageTop />
           <p>This is the main page</p>   
         </div>
         <div className="right-side">
