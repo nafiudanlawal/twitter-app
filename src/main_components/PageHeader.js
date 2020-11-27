@@ -1,11 +1,13 @@
+import { ReactComponent as Icon }from "../icons/spark.svg";
+
 function PageTop(){
     return (
         <div className="PageTop">
             <div className="text">
-                <span>Home Page Text</span>
+                <span>Home</span>
             </div>
             <div class="right-icon">
-                <i className="icon icon-spark"></i>
+                <Icon />
             </div>
         </div>
     );

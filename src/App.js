@@ -3,6 +3,7 @@ import "./App.scss";
 import { ReactComponent as Logo }from "./bird.svg";
 import Menu from "./left-column/menu";
 import PageTop from "./main_components/PageHeader";
+import TweetForm from "./main_components/TweetForm";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <main>
         <div className="main">
           <PageTop />
+          <TweetForm />
           <p>This is the main page</p>   
         </div>
         <div className="right-side">
@@ -44,22 +46,6 @@ function App() {
     
   );
 }
-/**
- * <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
- */
+
+
 export default App;
