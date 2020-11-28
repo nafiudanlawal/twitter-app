@@ -6,7 +6,7 @@ function PageTop(){
             <div className="text">
                 <span>Home</span>
             </div>
-            <div class="right-icon">
+            <div className="right-icon">
                 <Icon />
             </div>
         </div>

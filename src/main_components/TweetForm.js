@@ -5,37 +5,38 @@ import { ReactComponent as PollIcon }from "../icons/poll.svg";
 import { ReactComponent as GifIcon }from "../icons/gif.svg";
 import { ReactComponent as EmojiIcon }from "../icons/emoji.svg";
 import { ReactComponent as GlobeIcon }from "../icons/globe.svg";
-import { ReactComponent as PlusIcon }from "../icons/plus.svg";
-import { ReactComponent as ProgressIcon }from "../icons/progress-circle.svg";
+import { ReactComponent as PlusCircleIcon }from "../icons/plusCircle.svg";
+import TextareaAutosize from 'react-textarea-autosize';
 import { useState } from "react";
+import ProgressCircle from "./ProgressCircle";
 
-
+const maxLength = 255;
 function TweetForm(props) {
     
     const [text, setText] = useState("");
+    const [progressCirclePercentage, setProgressCirclePercentage] = useState(0);
+    const [progressCircleText, setProgressCircleText] = useState("");
+    const [progressCircleStyle, setProgressCircleStyle] = useState("");
+    
 
     const textChanged = (event, setText1 = setText) => {
         const value = event.target.value;
         setText1(value);
-        console.log(value.length);
-        let circle = document.querySelector('.progress-ring__circle');
-        console.log(circle);
+
+        let lengthPercentage = (value.length / maxLength) * 100;
         
-        let radius = circle.r.baseVal.value;
-        let circumference = radius * 2 * Math.PI;
-        console.log(radius);
-        console.log(circumference);
-        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-        circle.style.strokeDashoffset = `${circumference}`;
-
-        function setProgress(percent) {
-            const offset = circumference - percent / 100 * circumference;
-            circle.style.strokeDashoffset = offset;
+        // Put text of count to maxLength
+        if( value.length < maxLength  - 20){
+            if ( lengthPercentage >= 0 && lengthPercentage <= 100 ) {
+                setProgressCirclePercentage(lengthPercentage)
+            }
+        }else if(value.length > maxLength  - 20 && value.length <= maxLength){
+            setProgressCirclePercentage(lengthPercentage);
+            setProgressCircleText(maxLength -  value.length);
+        }else{
+            
         }
-
-        if (value < 101 && value >= 0) {
-            setProgress(80);
-        }
+        
     };
     
     return ( 
@@ -48,13 +49,13 @@ function TweetForm(props) {
             <div className="FormArea" >
                 <div className="FormBody">
                     <div className="">
-                        <textarea 
+                        <TextareaAutosize 
+                        autoFocus 
                         value={text} 
                         placeholder="What's happening?"
                         onChange={textChanged}
-                        >
-                            
-                        </textarea> 
+                        cols="47"
+                        />
                     </div>
                    <div className="publicity-area">
                        <button className="PublicityButton">
@@ -85,14 +86,21 @@ function TweetForm(props) {
                             </li>
                         </ul>
                     </div>
-                    <div className="textContentStat">
-                        <span className="CountWheel"> <ProgressIcon className="ProgressRing" /> </span> | <span className="PlusIcon"> <PlusIcon /> </span>
-                    </div>
-                    <div className="SubmitBtnHolder">
-                        <button className="SubmitBtn">Tweet</button>
+                    <div className="FloatRightSide">
+                        <div className="TextContentStat">
+                            <span className="CountWheel"> 
+                                <ProgressCircle strokeWidth={10} percentage={progressCirclePercentage} text={progressCircleText} style={progressCircleStyle}/> 
+                            </span>
+                            | 
+                            <span className="PlusIcon"> 
+                                <PlusCircleIcon /> 
+                            </span>
+                        </div>
+                        <div className="SubmitBtnHolder">
+                            <button className="SubmitBtn">Tweet</button>
+                        </div>
                     </div>
                 </div>
-                
             </div> 
         </div>
     );

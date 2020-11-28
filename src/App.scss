@@ -50,10 +50,7 @@
     .list-group {
         list-style: none;
     }
-    svg{
-        width: 22.5px;
-        height: 22.5px;
-    }
+    
     main {
         display: flex;
         .PageTop {
@@ -158,12 +155,13 @@
                     }
                 }
                 .FormBottom{
+                    svg{
+                        width: 25px;
+                        height: 25px;
+                    }
                     .PlusIcon{
                         width: 28px;
                         height: 28px;
-                        border: 1px solid currentColor;
-                        padding: 9px 1px 0px 1px;
-                        border-radius: 50%;
                         color: #1da1f2;
                         fill: currentColor;
                     }
@@ -191,30 +189,42 @@
                         }
                     }
                 }
-                .IconButtonsList{
-                    list-style: none;
-                    display: flex;
-                    justify-content: flex-start;
-                    padding-left: 0px;
-                    .IconButtonsListItem{
-                        height: 22.5px;
-                        width: 37px;
-                        height: 37px;
+                .IconsHolder{
+                    display: inline-block;
+                    .IconButtonsList{
+                        list-style: none;
                         display: flex;
-                        justify-content: center;
-                        svg{
-                            width: 24px;
-                            color: #1da1f2;
-                            fill: currentColor;
+                        justify-content: flex-start;
+                        padding-left: 0px;
+                        .IconButtonsListItem{
+                            height: 22.5px;
+                            width: 37px;
+                            height: 37px;
+                            display: flex;
+                            justify-content: center;
+                            svg{
+                                width: 24px;
+                                color: #1da1f2;
+                                fill: currentColor;
+                            }
                         }
                     }
                 }
+                .TextContentStat{
+                    display: inline-flex;
+                    float: right;
+                }
+                .SubmitBtnHolder{
+                    display: inline-flex;
+                    float: right;
+                }
+                
             }
         }
     }
 }
 
-i.icon {
+i.icon, .icon {
     width: 25px;
     height: 25px;
     display: inline-block;
