@@ -7,38 +7,52 @@ import { ReactComponent as EmojiIcon }from "../icons/emoji.svg";
 import { ReactComponent as GlobeIcon }from "../icons/globe.svg";
 import { ReactComponent as PlusIcon }from "../icons/plus.svg";
 import { ReactComponent as ProgressIcon }from "../icons/progress-circle.svg";
+import { useState } from "react";
 
 
 function TweetForm(props) {
-    /* let circle = document.querySelector('circle');
-    let radius = circle.r.baseVal.value;
-    let circumference = radius * 2 * Math.PI;
+    
+    const [text, setText] = useState("");
 
-    circle.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle.style.strokeDashoffset = `${circumference}`;
+    const textChanged = (event, setText1 = setText) => {
+        const value = event.target.value;
+        setText1(value);
+        console.log(value.length);
+        let circle = document.querySelector('.progress-ring__circle');
+        console.log(circle);
+        
+        let radius = circle.r.baseVal.value;
+        let circumference = radius * 2 * Math.PI;
+        console.log(radius);
+        console.log(circumference);
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = `${circumference}`;
 
-    function setProgress(percent) {
-    const offset = circumference - percent / 100 * circumference;
-    circle.style.strokeDashoffset = offset;
-    }
+        function setProgress(percent) {
+            const offset = circumference - percent / 100 * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
 
-    const input = document.querySelector('input');
-    setProgress(input.value);
-
-    input.addEventListener('change', function(e) {
-    if (input.value < 101 && input.value > -1) {
-        setProgress(input.value);
-    }  
-    }) */
+        if (value < 101 && value >= 0) {
+            setProgress(80);
+        }
+    };
+    
     return ( 
-        <div className = "TweetForm" >
-            <div className = "LeftDP" >
-                <img src = "/images/dp-placeholder.jpg" alt = "DpImagePlacholder" />
+        <div className="TweetForm" >
+            <div className="LeftDP" >
+                <div className="DpHolder">
+                    <img src="/images/dp-placeholder.jpg" alt ="DpImagePlacholder" />
+                </div>
             </div> 
-            <div className = "FormArea" >
+            <div className="FormArea" >
                 <div className="FormBody">
                     <div className="">
-                        <textarea placeholder = "What's happening?">
+                        <textarea 
+                        value={text} 
+                        placeholder="What's happening?"
+                        onChange={textChanged}
+                        >
                             
                         </textarea> 
                     </div>
@@ -71,7 +85,7 @@ function TweetForm(props) {
                             </li>
                         </ul>
                     </div>
-                    <div className="">
+                    <div className="textContentStat">
                         <span className="CountWheel"> <ProgressIcon className="ProgressRing" /> </span> | <span className="PlusIcon"> <PlusIcon /> </span>
                     </div>
                     <div className="SubmitBtnHolder">

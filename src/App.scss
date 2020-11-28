@@ -92,17 +92,24 @@
             .LeftDP {
                 padding: 1em;
                 display: inline;
-                img {
-                    border-radius: 50%;
-                    width: 49px;
-                    height: 49px;
+                .DpHolder{
+                    display: inline-flex;
+                    float: left;
+                    padding: 3px 10px;
+                    margin-right: 5px;
+                    img {
+                        border-radius: 50%;
+                        width: 49px;
+                        height: 49px;
+                    }
                 }
             }
             .ProgressRing{
                 transition: 0.35s stroke-dashoffset;
-                // axis compensation
                 transform: rotate(-90deg);
                 transform-origin: 50% 50%;
+                width: 150px;
+                height: 150px;
             }
             .FormArea {
                 display: inline-block;
@@ -148,6 +155,40 @@
                         -moz-box-shadow: none;
                         box-shadow: none;
                         resize: none;
+                    }
+                }
+                .FormBottom{
+                    .PlusIcon{
+                        width: 28px;
+                        height: 28px;
+                        border: 1px solid currentColor;
+                        padding: 9px 1px 0px 1px;
+                        border-radius: 50%;
+                        color: #1da1f2;
+                        fill: currentColor;
+                    }
+                    .SubmitBtn{
+                        background-color: #1da1f2;
+                        border-radius: 25px;
+                        border: none;
+                        color: #ffffff;
+                        padding: 10px 22px;
+                        font-size: 1em;
+                        font-weight: 800;
+                        overflow: auto;
+                        outline: none;
+                        box-shadow: none;
+                        &:active,
+                        &:focus,
+                        &:focus-within,
+                        &:focus {
+                            border: none;
+                            background-color: #1a91da;
+                        }
+                        &:hover{
+                            background-color: #1a91da;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .IconButtonsList{

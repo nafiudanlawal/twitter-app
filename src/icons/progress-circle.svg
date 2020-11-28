@@ -1,7 +1,7 @@
 <svg
    class="progress-ring"
-   width="120"
-   height="120">
+   width="22.5"
+   height="22.5">
   <circle
     class="progress-ring__circle"
     stroke="#1da1f2"
