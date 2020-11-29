@@ -1,4 +1,3 @@
-import Tweet from "./Tweet";
 
 const TweetInfoTop = ({Icon, Text}) => {
     return (

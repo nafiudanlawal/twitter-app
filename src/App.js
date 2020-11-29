@@ -4,6 +4,7 @@ import PageTop from "./main_components/PageHeader";
 import TweetForm from "./main_components/TweetForm";
 import Header from "./left-column/Layout";
 import Tweet from "./main_components/Tweet";
+import MainRightColumn from "./right-column/Container";
 
 
 function App() {
@@ -28,13 +29,10 @@ function App() {
           </section>
             
         </div>
-        <div className="right-side">
-          <p>This is the right Side</p>  
+        <div className="RightSide">
+          <MainRightColumn />
         </div>  
       </main>
-      <div id="right-colum">
-
-      </div>
     </div>
     
   );

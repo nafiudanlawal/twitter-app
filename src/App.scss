@@ -180,8 +180,31 @@
                 }
             }
         }
-        .right-side {
+        .RightSide {
             width: 250px;
+            .Search{
+                border: 1px solid #c4c4c4;
+                background-color: #c4c4c4;
+                width: 500px;
+                overflow-x: hidden;
+                height:auto;
+                display: flex;
+                border-radius: 2em;
+                font-size: 15px;
+                .SearchButton{
+                    padding: 10px 5px; 
+                    display: inline-block;
+                    button{
+                        padding: 10px;
+                        border-radius: 50%;
+                        border: none;
+                        margin: 3px;
+                        background-color: #FF7A0000;
+                        color: #ffffff;
+                        font-size: 15px;
+                    }
+                }
+            }
         }
         .TweetForm {
             width: 100%;
