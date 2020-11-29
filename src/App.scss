@@ -249,6 +249,7 @@
                     }
                 }
                 .ListItem{
+                    cursor: pointer;
                     padding: 5px 15px;
                     border-bottom: 2px solid #ebeef0;
                     .Source{
@@ -299,6 +300,7 @@
                     }
                 }
                 .UserList{
+                    cursor: pointer;
                     .UserItem{
                         padding: 10px 15px;
                         display: flex;
@@ -322,6 +324,9 @@
                                 .Name{
                                     font-size: 15px;
                                     font-weight: 800;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
                                 }
                                 .Handle{
                                     font-size: 15px;
@@ -331,7 +336,9 @@
                             .Button{
                                 display: flex;
                                 align-items: center;
+                                
                                 button{
+                                    cursor: pointer;
                                     padding: 5px 15px;
                                     border: 1px solid #1da1f2;
                                     border-radius: 2em;
@@ -355,6 +362,31 @@
                     }
                 }
                 
+            }
+            .Footer{
+                .Link{
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 15px;
+                    color: #5b7083;
+                    margin: 0px 5px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .Top{
+                    display: flex;
+                    margin: 10px 0px;
+                    color: #5b7083;
+                }
+                .Bottom{
+                    display: flex;
+                    margin: 10px 0px;
+                    color: #5b7083;
+                    span{
+                        font-size: 15px;
+                    }
+                }
             }
         }
         .TweetForm {
