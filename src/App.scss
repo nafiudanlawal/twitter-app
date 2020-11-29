@@ -298,6 +298,63 @@
                         font-weight: 800;
                     }
                 }
+                .UserList{
+                    .UserItem{
+                        padding: 10px 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #ebeef0;
+                        .dp{
+                            padding-right: 10px;
+                            img{
+                                border-radius: 50%;
+                                width: 49px;
+                                height: 49px;
+                            }
+                        }
+                        .RightColumn{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            .Content{
+                                height: 42px;
+                                align-self: center;
+                                .Name{
+                                    font-size: 15px;
+                                    font-weight: 800;
+                                }
+                                .Handle{
+                                    font-size: 15px;
+                                    color: #5b7083;
+                                }
+                            }
+                            .Button{
+                                display: flex;
+                                align-items: center;
+                                button{
+                                    padding: 5px 15px;
+                                    border: 1px solid #1da1f2;
+                                    border-radius: 2em;
+                                    background-color: #f6f5fe;
+                                    color: #1a91da;
+                                    font-weight: 800;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .Footer{
+                    padding: 10px;
+                    a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: #1da1f2;
+                        font-size: 15px;
+                    }
+                }
+                
             }
         }
         .TweetForm {

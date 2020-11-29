@@ -1,3 +1,5 @@
+const { default: FollowUserItem } = require("./FollowUserItem")
+
 const FollowSuggestions = () => {
     return (
         <div className="FollowList">
@@ -7,17 +9,12 @@ const FollowSuggestions = () => {
                 </div>
             </div>
             <div className="UserList">
-                <div className="UserItem">
-                    <div className="dp">
-                        <img src="" alt=""/>
-                    </div>
-                    <div className="content">
-
-                    </div>
-                    <div className="button">
-                        <button className="FollowBtnWhite">Follow</button>
-                    </div>
-                </div>
+                <FollowUserItem DP="/images/dp-placeholder.jpg" Name="Macintosh Burglar" Handle="@CatBuglar" />
+                <FollowUserItem DP="/images/dp-placeholder.jpg" Name="Walter White" Handle="@BreakingBad" />
+                <FollowUserItem DP="/images/dp-placeholder.jpg" Name="Steven Segal" Handle="@KatakeKid" />
+            </div>
+            <div className="Footer">
+                <span><a href="">Show More</a></span>
             </div>
         </div>
     )
