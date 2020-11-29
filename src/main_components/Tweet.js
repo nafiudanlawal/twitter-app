@@ -8,7 +8,7 @@ function Tweet(content, type, sender, time){
                 </div>
                 <div className="tweet-item-content-column">
                     <div className="tweet-extra-info">
-
+                        <i className="icon-bell "></i>
                     </div>
                     <div className="tweet-top">
                         

@@ -1,21 +1,11 @@
 
-function Menu(props) {
-  //const icon = require( `../public/icons/${props.icon}}.svg`);
- /*  const mouseOver = (e) => {
-    if(e.target.classList.includes("wrapper")){
-      e.target.style.background = "rgba(29, 161, 242, 0.2)";
-    }
-    
-    console.log(e);
-  };
-  const mouseLeave = (e) => {
-    e.target.style.background = "unset";
-  }; */
+const Menu = ({icon, title}) => {
+  console.log(icon);
   return (
     <div className="Menu">
-      <div className="wrapper" /* onMouseOver={mouseOver} onMouseLeave={mouseLeave} */>
-        <i className={`icon icon-${props.icon}`}></i>
-        <span className="title">{props.title}</span>
+      <div className="wrapper">
+        <span className="icon">{icon}</span>
+        <span className="title">{title}</span>
       </div>
     </div>
   );

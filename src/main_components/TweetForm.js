@@ -91,7 +91,7 @@ function TweetForm(props) {
                             <span className="CountWheel"> 
                                 <ProgressCircle strokeWidth={10} percentage={progressCirclePercentage} text={progressCircleText} style={progressCircleStyle}/> 
                             </span>
-                            | 
+                            <div className="VerticalDivider"></div>
                             <span className="PlusIcon"> 
                                 <PlusCircleIcon /> 
                             </span>

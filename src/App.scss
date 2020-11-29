@@ -24,31 +24,68 @@
     }
     header {
         align-items: flex-end;
-        .logo {
-            width: 35px;
-            height: 35px;
-            color: rgb(89, 114, 129);
-            fill: currentcolor;
-            svg {
-                color: rgba(29, 161, 242, 1.00);
+        a {
+            color: inherit;
+        }
+        .LeftMenus{
+            .list-group{
+                padding-left: 0px;
+                list-style: none;
+                li {
+                    padding: 5px 5px 5px 0px;
+                }
             }
-        }
-        .list-group li {
-            padding: 0.5rem 0px 0.5rem 0px;
-        }
-        .Menu {
-            .wrapper {
-                display: flex;
-                .title {
-                    margin: 0px 20px;
-                    font-weight: 600;
-                    font-size: 1.2em;
+            .TweetBtnLarge{
+                display: inline-flex;
+                justify-content: center;
+                width: calc(100% - 25px);
+                margin: 15px 0px;
+                background-color: #1da1f2;
+                border-radius: 25px;
+                border: none;
+                color: #ffffff;
+                padding: 10px 22px;
+                font-size: 1.2em;
+                font-weight: 800;
+                overflow: auto;
+                outline: none;
+                box-shadow: none;
+            }
+            .logo {
+                width: 30px;
+                height: 30px;
+                margin-top: 10px;
+                padding-left: 10px;
+                color: rgb(89, 114, 129);
+                fill: currentcolor;
+                svg {
+                    color: rgba(29, 161, 242, 1.00);
+                }
+            }
+            .Menu {
+                display: inline-block;
+                padding: 10px 10px 10px 10px;
+                .wrapper {
+                    display: flex;
+                    .title {
+                        margin: 0px 20px;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                    }
+                }
+                &:hover{
+                    border-radius: 2em;
+                    width: auto;
+                    background-color: #e6f5fe;
+                    cursor: pointer;
+                    color: #1da1f2;
+                    svg{
+                        fill: #1da1f2;
+                    }
                 }
             }
         }
-    }
-    .list-group {
-        list-style: none;
+        
     }
     
     main {
@@ -210,15 +247,29 @@
                         }
                     }
                 }
-                .TextContentStat{
-                    display: inline-flex;
+                .FloatRightSide{
                     float: right;
+                    
+                    .TextContentStat{
+                        display: inline-flex;
+                        justify-content: center;
+                        margin: 15px 0px;
+                        justify-content: center;
+                        height: 37px;
+                        margin: 15px 0px;
+                        align-items: center;
+                        .VerticalDivider{
+                            width: 1px;
+                            background-color: #ebeef0;
+                            height: 100%;
+                        }
+                    }
+                    .SubmitBtnHolder{
+                        display: inline-flex;
+                        justify-content: center;
+                        margin: 15px 0px;
+                    }
                 }
-                .SubmitBtnHolder{
-                    display: inline-flex;
-                    float: right;
-                }
-                
             }
         }
     }
