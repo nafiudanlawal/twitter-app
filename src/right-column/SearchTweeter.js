@@ -2,10 +2,10 @@
 const SearchBox = ({Icon, placholder}) => {
     return (
         <div className="Search">
-            <div className="SearchButton">
-                <button>{Icon}q</button>
+            <div className="SearchButton GreyBack">
+                <span className="GreyBack">{Icon}</span>
             </div>
-            <input type="text" placeholder={placholder} />
+            <input className="GreyBack" type="text" placeholder={placholder} />
         </div>
         
     );

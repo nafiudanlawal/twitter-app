@@ -33,9 +33,9 @@ const Tweet = ({content, type, sender, time, tweetInfoTop}) => {
                     </div>
                     <div className="TweetActions">
                         <div className="Actions">
-                            <div className="ActionItem"><CommentIcon /><span className="CountText"><span>7</span></span></div>
-                            <div className="ActionItem"><RetweetIcon /><span className="CountText"><span>7</span></span></div>
-                            <div className="ActionItem"><LikeIcon /><span className="CountText"><span>7</span></span></div>
+                            <div className="ActionItem"><CommentIcon /><span className="CountText"><span>27</span></span></div>
+                            <div className="ActionItem"><RetweetIcon /><span className="CountText"><span>47</span></span></div>
+                            <div className="ActionItem"><LikeIcon /><span className="CountText"><span>17</span></span></div>
                             <div className="ActionItem"><ShareIcon /></div>
                         </div>
                     </div>

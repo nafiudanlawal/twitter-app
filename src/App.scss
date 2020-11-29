@@ -181,27 +181,121 @@
             }
         }
         .RightSide {
-            width: 250px;
+            width: 350px;
+            padding: 10px 0px 0px 23px;
+            .GreyBack{
+                background-color: #ebeef0;
+            }
             .Search{
-                border: 1px solid #c4c4c4;
-                background-color: #c4c4c4;
-                width: 500px;
+                border: none;
+                width: 100%;
                 overflow-x: hidden;
-                height:auto;
+                height:37px;
                 display: flex;
                 border-radius: 2em;
                 font-size: 15px;
+                margin-bottom: 10px;
+                input{
+                    width: 100%;
+                    overflow: hidden;
+                    border: none;
+                    font-size: 15px;
+                    outline: none;
+                }
                 .SearchButton{
                     padding: 10px 5px; 
-                    display: inline-block;
-                    button{
-                        padding: 10px;
-                        border-radius: 50%;
-                        border: none;
-                        margin: 3px;
-                        background-color: #FF7A0000;
+                    display: flex;
+                    span{
+                        margin-left: 8px;
+                        width: 22.5px;
                         color: #ffffff;
+                        height: 22.5px;
+                        svg{
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+            .TrendingList{
+                margin: 10px 0px;
+                border-radius: 1em;
+                min-height: 300px;
+                background-color: #f7f9fa;
+                .Heading{
+                    border-bottom: 1px solid #ebeef0;
+                    .Content{
+                        width: calc(100% - 30px);
+                        height: 30px;
+                        padding: 10px 15px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .title{
+                        font-size: 19px;
+                        padding-left: 10px;
+                        align-self: center;
+                        font-weight: 800;
+                    }
+                    .icon{
+                        width: 22.5px;
+                        height: 22.5px;
+                        padding: 10px;
+                        svg{
+                            display: inline-block;
+                            fill: #1da1f2;
+
+                        }
+                    }
+                }
+                .ListItem{
+                    padding: 5px 15px;
+                    border-bottom: 2px solid #ebeef0;
+                    .Source{
+                        font-size: 13px;
+                        color: #5b7083;
+                        margin: 3px 0px;
+                    }
+                    .Topic{
                         font-size: 15px;
+                        font-weight: 800;
+                        margin: 10px 0px;
+                    }
+                    .Stats{
+                        font-size: 13px;
+                        color: #5b7083;
+                        margin: 3px 0px;
+                    }
+                }
+                .Footer{
+                    padding: 10px;
+                    a{
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: #1da1f2;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .FollowList{
+                margin-top: 5px;
+                border-radius: 1em;
+                min-height: 200px;
+                background-color: #f7f9fa;
+                .Heading{
+                    border-bottom: 1px solid #ebeef0;
+                    .Content{
+                        width: calc(100% - 30px);
+                        height: 30px;
+                        padding: 10px 15px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .title{
+                        font-size: 19px;
+                        padding-left: 10px;
+                        align-self: center;
+                        font-weight: 800;
                     }
                 }
             }
