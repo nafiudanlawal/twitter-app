@@ -42,7 +42,7 @@ const ProgressCircle = ({ strokeWidth, percentage, text }) => {
             y={50}
             style={{
                 fill: '#007dbc',
-            fontSize: '24px',
+            fontSize: '3em',
             dominantBaseline: 'central',
             textAnchor: 'middle',
             }}>
