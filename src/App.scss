@@ -1,5 +1,5 @@
-@import 'media-queries';
-@import 'base';
+@import "media-queries";
+@import "base";
 .App {
     display: flex;
     height: 100vh;
@@ -27,15 +27,15 @@
         a {
             color: inherit;
         }
-        .LeftMenus{
-            .list-group{
+        .LeftMenus {
+            .list-group {
                 padding-left: 0px;
                 list-style: none;
                 li {
                     padding: 5px 5px 5px 0px;
                 }
             }
-            .TweetBtnLarge{
+            .TweetBtnLarge {
                 display: inline-flex;
                 justify-content: center;
                 width: calc(100% - 25px);
@@ -59,7 +59,7 @@
                 color: rgb(89, 114, 129);
                 fill: currentcolor;
                 svg {
-                    color: rgba(29, 161, 242, 1.00);
+                    color: rgba(29, 161, 242, 1);
                 }
             }
             .Menu {
@@ -73,21 +73,20 @@
                         font-size: 1.2em;
                     }
                 }
-                &:hover{
+                &:hover {
                     border-radius: 2em;
                     width: auto;
                     background-color: #e6f5fe;
                     cursor: pointer;
                     color: #1da1f2;
-                    svg{
+                    svg {
                         fill: #1da1f2;
                     }
                 }
             }
         }
-        
     }
-    
+
     main {
         display: flex;
         .PageTop {
@@ -114,62 +113,151 @@
             border-right: 1px solid #ebeef0;
             border-left: 1px solid #ebeef0;
             box-sizing: border-box;
-            .Feeds{
+            .Feeds {
                 border-top: 1px solid #ebeef0;
                 margin-bottom: 2em;
-                .TweetItem{
+                .TweetItem {
                     border-bottom: 1px solid #ebeef0;
-                    .TweetExtraInfo{
+                    padding: 0px 15px;
+                    .TweetExtraInfo {
                         padding-left: 51px;
+                        .TweetExtraText {
+                            font-size: 13px;
+                            color: #5b7083;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 8px;
+                        }
+                        i {
+                            width: 13px;
+                            height: 13px;
+                            margin-right: 8px;
+                        }
                     }
-                    .TweetContent{
+                    .TweetContent {
                         display: flex;
-                        .TweetItemDp{
+                        .TweetItemDp {
                             display: flex;
                             justify-content: center;
-                            img{
+                            margin-right: 5px;
+                            &:hover {
+                                cursor: pointer;
+                                img{
+                                    filter: brightness(0.9);
+                                }
+                            }
+                            img {
                                 width: 49px;
                                 height: 49px;
                                 border-radius: 50%;
-                                margin:10px;
                             }
                         }
-                        .TweetItemContentColumn{
+                        .TweetItemContentColumn {
                             width: 100%;
                             padding-left: 5px;
-                            .TweetTop{
+
+                            .TweetTop {
                                 font-size: 14px;
-                                .SenderName{
-                                    font-weight: 800;
+                                .Sender {
+                                    display: inline-flex;
+                                    &:hover {
+                                        cursor: pointer;
+                                        .SenderName {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .SenderName {
+                                        font-weight: 800;
+                                    }
+                                    .SenderHandle {
+                                        font-weight: 500;
+                                        color: #5b7083;
+                                    }
                                 }
-                                .SenderHandle{
+                                .SendTime {
                                     font-weight: 500;
+                                    color: #5b7083;
                                 }
                             }
-                            .TweetContentDetail{
+                            .TweetContentDetail {
                                 font-size: 15px;
                                 padding: 1px 0px;
+
+                                .AttachedImage {
+                                    height: 285.5px;
+                                    overflow: hidden;
+                                    margin-top: 10px;
+                                    border-radius: 1em;
+                                    img {
+                                        width: 100%;
+                                        object-fit: cover;
+                                        border-radius: 1em;
+                                    }
+                                }
+                                .AttachedImage2 {
+                                    height: 285.5px;
+                                    overflow: hidden;
+                                    margin-top: 10px;
+                                    border-radius: 1em;
+                                    display: flex;
+                                    flex-flow: wrap;
+                                    justify-content: space-between;
+                                    img {
+                                        width: calc(50% - 1px);
+                                        object-fit: cover;
+                                    }
+                                }
+                                .AttachedImage3 {
+                                    height: 285.5px;
+                                    overflow: hidden;
+                                    margin-top: 10px;
+                                    border-radius: 1em;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-flow: wrap;
+                                    img {
+                                        width: calc(50% - 1px);
+                                        object-fit: cover;
+                                    }
+                                }
+                                .AttachedImage4 {
+                                    height: 285.5px;
+                                    overflow: hidden;
+                                    margin-top: 10px;
+                                    border-radius: 1em;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-flow: wrap;
+                                    img {
+                                        width: calc(50% - 2px);
+                                        height: 50%;
+                                        margin: 1px;
+                                        object-fit: cover;
+                                    }
+                                }
                             }
-                            .TweetActions{
+                            .TweetActions {
                                 padding: 0px 100px 10px 0px;
                                 margin-top: 10px;
-                                .Actions{
+                                .Actions {
                                     list-style: none;
                                     display: flex;
                                     justify-content: space-between;
                                     padding-left: 0px;
-                                    .ActionItem{
+                                    .ActionItem {
                                         display: flex;
                                         justify-content: center;
-                                        .CountText{
-                                            font-size: 15px;
+                                        align-items: center;
+                                        .Text {
+                                            font-size: 13px;
+                                            color: #5b7083;
                                         }
-                                        span{
+                                        span {
                                             margin: 0px 5px;
                                         }
-                                        svg{
-                                            width: 19px;
-                                            height: 19px;
+                                        svg {
+                                            width: 18px;
+                                            height: 18px;
                                             display: inline;
                                         }
                                     }
@@ -183,94 +271,93 @@
         .RightSide {
             width: 350px;
             padding: 10px 0px 0px 23px;
-            .GreyBack{
+            .GreyBack {
                 background-color: #ebeef0;
             }
-            .Search{
+            .Search {
                 border: none;
                 width: 100%;
                 overflow-x: hidden;
-                height:37px;
+                height: 37px;
                 display: flex;
                 border-radius: 2em;
                 font-size: 15px;
                 margin-bottom: 10px;
-                input{
+                input {
                     width: 100%;
                     overflow: hidden;
                     border: none;
                     font-size: 15px;
                     outline: none;
                 }
-                .SearchButton{
-                    padding: 10px 5px; 
+                .SearchButton {
+                    padding: 10px 5px;
                     display: flex;
-                    span{
+                    span {
                         margin-left: 8px;
                         width: 22.5px;
                         color: #ffffff;
                         height: 22.5px;
-                        svg{
+                        svg {
                             width: 18px;
                             height: 18px;
                         }
                     }
                 }
             }
-            .TrendingList{
+            .TrendingList {
                 margin: 10px 0px;
                 border-radius: 1em;
                 min-height: 300px;
                 background-color: #f7f9fa;
-                .Heading{
+                .Heading {
                     border-bottom: 1px solid #ebeef0;
-                    .Content{
+                    .Content {
                         width: calc(100% - 30px);
                         height: 30px;
                         padding: 10px 15px;
                         display: flex;
                         justify-content: space-between;
                     }
-                    .title{
+                    .title {
                         font-size: 19px;
                         padding-left: 10px;
                         align-self: center;
                         font-weight: 800;
                     }
-                    .icon{
+                    .icon {
                         width: 22.5px;
                         height: 22.5px;
                         padding: 10px;
-                        svg{
+                        svg {
                             display: inline-block;
                             fill: #1da1f2;
-
                         }
                     }
                 }
-                .ListItem{
+                .ListItem {
                     cursor: pointer;
                     padding: 5px 15px;
                     border-bottom: 2px solid #ebeef0;
-                    .Source{
+                    .Source {
                         font-size: 13px;
                         color: #5b7083;
                         margin: 3px 0px;
                     }
-                    .Topic{
+                    .Topic {
                         font-size: 15px;
                         font-weight: 800;
                         margin: 10px 0px;
                     }
-                    .Stats{
+                    .Stats {
                         font-size: 13px;
                         color: #5b7083;
                         margin: 3px 0px;
                     }
                 }
-                .Footer{
+                .Footer {
                     padding: 10px;
-                    a{
+                    a {
                         text-decoration: none;
                         cursor: pointer;
                         color: #1da1f2;
@@ -278,66 +365,72 @@
                     }
                 }
             }
-            .FollowList{
+            .FollowList {
                 margin-top: 5px;
                 border-radius: 1em;
                 min-height: 200px;
                 background-color: #f7f9fa;
-                .Heading{
+                .Heading {
                     border-bottom: 1px solid #ebeef0;
-                    .Content{
+                    .Content {
                         width: calc(100% - 30px);
                         height: 30px;
                         padding: 10px 15px;
                         display: flex;
                         justify-content: space-between;
                     }
-                    .title{
+                    .title {
                         font-size: 19px;
                         padding-left: 10px;
                         align-self: center;
                         font-weight: 800;
                     }
                 }
-                .UserList{
+                .UserList {
                     cursor: pointer;
-                    .UserItem{
+                    .UserItem {
                         padding: 10px 15px;
                         display: flex;
                         justify-content: space-between;
                         border-bottom: 1px solid #ebeef0;
-                        .dp{
+                        .dp {
                             padding-right: 10px;
-                            img{
+                            &:hover {
+                                cursor: pointer;
+                                img{
+                                    filter: brightness(0.9);
+                                }
+                            }
+                            img {
                                 border-radius: 50%;
                                 width: 49px;
                                 height: 49px;
                             }
                         }
-                        .RightColumn{
+                        .RightColumn {
                             display: flex;
                             justify-content: space-between;
                             width: 100%;
-                            .Content{
+                            .Content {
                                 height: 42px;
                                 align-self: center;
-                                .Name{
+                                .Name {
                                     font-size: 15px;
                                     font-weight: 800;
-                                    &:hover{
+                                    &:hover {
                                         text-decoration: underline;
                                     }
                                 }
-                                .Handle{
+                                .Handle {
                                     font-size: 15px;
                                     color: #5b7083;
                                 }
                             }
-                            .Button{
+                            .Button {
                                 display: flex;
                                 align-items: center;
-                                
-                                button{
+
+                                button {
                                     cursor: pointer;
                                     padding: 5px 15px;
                                     border: 1px solid #1da1f2;
@@ -349,41 +442,39 @@
                                 }
                             }
                         }
-                        
                     }
                 }
-                .Footer{
+                .Footer {
                     padding: 10px;
-                    a{
+                    a {
                         text-decoration: none;
                         cursor: pointer;
                         color: #1da1f2;
                         font-size: 15px;
                     }
                 }
-                
             }
-            .Footer{
-                .Link{
+            .Footer {
+                .Link {
                     text-decoration: none;
                     cursor: pointer;
                     font-size: 15px;
                     color: #5b7083;
                     margin: 0px 5px;
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
-                .Top{
+                .Top {
                     display: flex;
                     margin: 10px 0px;
                     color: #5b7083;
                 }
-                .Bottom{
+                .Bottom {
                     display: flex;
                     margin: 10px 0px;
                     color: #5b7083;
-                    span{
+                    span {
                         font-size: 15px;
                     }
                 }
@@ -397,11 +488,17 @@
             .LeftDP {
                 padding: 1em;
                 display: inline;
-                .DpHolder{
+                .DpHolder {
                     display: inline-flex;
                     float: left;
                     padding: 3px 10px;
                     margin-right: 5px;
+                    &:hover {
+                        cursor: pointer;
+                        img{
+                            filter: brightness(0.9);
+                        }
+                    }
                     img {
                         border-radius: 50%;
                         width: 49px;
@@ -409,7 +506,7 @@
                     }
                 }
             }
-            .ProgressRing{
+            .ProgressRing {
                 transition: 0.35s stroke-dashoffset;
                 transform: rotate(-90deg);
                 transform-origin: 50% 50%;
@@ -419,26 +516,26 @@
             .FormArea {
                 display: inline-block;
                 width: calc(100% - 100px);
-                .FormBody{
-                    .divider{
+                .FormBody {
+                    .divider {
                         height: 1px;
                         background-color: #ebeef0;
                         width: 100%;
                     }
-                    .PublicityButton{
+                    .PublicityButton {
                         color: #1da1f2;
                         background: inherit;
                         border: none;
                         border-radius: 5px;
-                        line-height: 1em;   
+                        line-height: 1em;
                         font-size: 0.8em;
                         display: flex;
                         align-items: center;
-                        span.icon{
+                        span.icon {
                             margin-right: 5px;
-                            svg{
-                                color:  #1da1f2;
-                                fill:currentColor;
+                            svg {
+                                color: #1da1f2;
+                                fill: currentColor;
                             }
                         }
                     }
@@ -462,18 +559,18 @@
                         resize: none;
                     }
                 }
-                .FormBottom{
-                    svg{
+                .FormBottom {
+                    svg {
                         width: 25px;
                         height: 25px;
                     }
-                    .PlusIcon{
+                    .PlusIcon {
                         width: 28px;
                         height: 28px;
                         color: #1da1f2;
                         fill: currentColor;
                     }
-                    .SubmitBtn{
+                    .SubmitBtn {
                         background-color: #1da1f2;
                         border-radius: 25px;
                         border: none;
@@ -491,26 +588,26 @@
                             border: none;
                             background-color: #1a91da;
                         }
-                        &:hover{
+                        &:hover {
                             background-color: #1a91da;
                             cursor: pointer;
                         }
                     }
                 }
-                .IconsHolder{
+                .IconsHolder {
                     display: inline-block;
-                    .IconButtonsList{
+                    .IconButtonsList {
                         list-style: none;
                         display: flex;
                         justify-content: flex-start;
                         padding-left: 0px;
-                        .IconButtonsListItem{
+                        .IconButtonsListItem {
                             height: 22.5px;
                             width: 37px;
                             height: 37px;
                             display: flex;
                             justify-content: center;
-                            svg{
+                            svg {
                                 width: 24px;
                                 color: #1da1f2;
                                 fill: currentColor;
@@ -518,10 +615,10 @@
                         }
                     }
                 }
-                .FloatRightSide{
+                .FloatRightSide {
                     float: right;
-                    
-                    .TextContentStat{
+
+                    .TextContentStat {
                         display: inline-flex;
                         justify-content: center;
                         margin: 15px 0px;
@@ -529,7 +626,7 @@
                         height: 37px;
                         margin: 15px 0px;
                         align-items: center;
-                        .VerticalDivider{
+                        .VerticalDivider {
                             width: 1px;
                             background-color: #ebeef0;
                             height: 100%;
@@ -537,7 +634,7 @@
                         }
                         margin-right: 10px;
                     }
-                    .SubmitBtnHolder{
+                    .SubmitBtnHolder {
                         display: inline-flex;
                         justify-content: center;
                         margin: 15px 0px;
@@ -548,7 +645,8 @@
     }
 }
 
-i.icon, .icon {
+i.icon,
+.icon {
     width: 25px;
     height: 25px;
     display: inline-block;

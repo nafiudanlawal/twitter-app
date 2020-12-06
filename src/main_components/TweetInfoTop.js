@@ -1,8 +1,8 @@
 
 const TweetInfoTop = ({Icon, Text}) => {
     return (
-        <div className="TweetInfoTop">
-
+        <div className="TweetExtraInfo">
+            <span className="TweetExtraText"><i className={Icon}></i> {Text}</span>
         </div>
     );
 };

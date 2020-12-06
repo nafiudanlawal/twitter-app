@@ -4,38 +4,43 @@ import { ReactComponent as RetweetIcon }from "../icons/retweet.svg";
 import { ReactComponent as LikeIcon }from "../icons/heart.svg";
 import { ReactComponent as ShareIcon }from "../icons/share.svg";
 import TweetInfoTop from "./TweetInfoTop";
+import AttachedImages from "./AttachedImages";
 
+const showUserInfo = (e) => {
+    console.log(e);
+};
 
-const Tweet = ({content, type, sender, time, tweetInfoTop}) => {
+const hideUserInfo = (userInfo) => {
+    console.log("hide modal");
+};
+
+const Tweet = ({content="", type, sender={handle:"nafiudanlawal", name:"Nafiu Lawal"}, time = '0s', tweetInfoTop, AttachedImagesProp = []}) => {
     const tweetExtraInfoTop = tweetInfoTop ?? {icon : "", "text": ""};
+    
     return(
         <article className="TweetItem">
-            <div className="TweetExtraInfo">
-                <span><i className="icon-bell icon"></i> retweeted by @jason_gunner</span>
-                {
-                    <TweetInfoTop  Icon={tweetExtraInfoTop.icon} Text={tweetExtraInfoTop.text} />
-                }
-            </div>
+            <TweetInfoTop  Icon="icon-bell icon" Text="retweeted by @jason_gunner" />
             <div className="TweetContent">
-                <div className="TweetItemDp">
+                <div className="TweetItemDp" onMouseEnter={showUserInfo} onMouseLeave={hideUserInfo}>
                     <img src="/images/dp-placeholder.jpg" alt="dp"/>
                 </div>
                 <div className="TweetItemContentColumn">
                     <div className="TweetTop">
-                        <span className="SenderName">Peter Gregory</span> &nbsp;
-                        <span className="SenderHandle">@fhjjj</span>&nbsp;&nbsp;
-                        <span className="SenderHandle">·</span>&nbsp;
-                        <span className="SenderHandle">1h</span>
+                        <div className="Sender" onMouseEnter={showUserInfo} onMouseLeave={hideUserInfo}>
+                            <span className="SenderName">{sender.name}</span> &nbsp;
+                            <span className="SenderHandle">{sender.handle}</span>&nbsp;&nbsp;
+                        </div>
+                        <span className="SendTime">·&nbsp;{time}</span>
                     </div>
                     <div className="TweetContentDetail">
-                        Stack Overflow be like,
-                        "I can explain it to you but I can't understand it for you."
+                        {content}
+                        <AttachedImages AttachedImagesUrl={ AttachedImagesProp } />
                     </div>
                     <div className="TweetActions">
                         <div className="Actions">
-                            <div className="ActionItem"><CommentIcon /><span className="CountText"><span>27</span></span></div>
-                            <div className="ActionItem"><RetweetIcon /><span className="CountText"><span>47</span></span></div>
-                            <div className="ActionItem"><LikeIcon /><span className="CountText"><span>17</span></span></div>
+                            <div className="ActionItem"><CommentIcon /><span className="Text"><span>27</span></span></div>
+                            <div className="ActionItem"><RetweetIcon /><span className="Text"><span>47</span></span></div>
+                            <div className="ActionItem"><LikeIcon /><span className="Text"><span>17</span></span></div>
                             <div className="ActionItem"><ShareIcon /></div>
                         </div>
                     </div>

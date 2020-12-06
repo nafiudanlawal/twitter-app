@@ -1,6 +1,5 @@
 
 const Menu = ({icon, title}) => {
-  console.log(icon);
   return (
     <div className="Menu">
       <div className="wrapper">
