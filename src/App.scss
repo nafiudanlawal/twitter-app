@@ -120,7 +120,8 @@
                     border-bottom: 1px solid #ebeef0;
                     padding: 0px 15px;
                     .TweetExtraInfo {
-                        padding-left: 51px;
+                        padding-left: 40px;
+                        margin-top: 3px;
                         .TweetExtraText {
                             font-size: 13px;
                             color: #5b7083;
@@ -140,16 +141,15 @@
                             display: flex;
                             justify-content: center;
                             margin-right: 5px;
-                            &:hover {
-                                cursor: pointer;
-                                img{
-                                    filter: brightness(0.9);
-                                }
-                            }
+                            
                             img {
                                 width: 49px;
                                 height: 49px;
                                 border-radius: 50%;
+                                &:hover {
+                                    cursor: pointer;
+                                    filter: brightness(0.9);
+                                }
                             }
                         }
                         .TweetItemContentColumn {
@@ -397,7 +397,7 @@
                             padding-right: 10px;
                             &:hover {
                                 cursor: pointer;
-                                img{
+                                img {
                                     filter: brightness(0.9);
                                 }
                             }
@@ -495,7 +495,7 @@
                     margin-right: 5px;
                     &:hover {
                         cursor: pointer;
-                        img{
+                        img {
                             filter: brightness(0.9);
                         }
                     }
@@ -526,11 +526,23 @@
                         color: #1da1f2;
                         background: inherit;
                         border: none;
-                        border-radius: 5px;
+                        padding: 2px 5px;
+                        border-radius: 2em;
                         line-height: 1em;
                         font-size: 0.8em;
                         display: flex;
                         align-items: center;
+                        margin-bottom: 10px;
+                        &:hover,
+                        &:active,
+                        &:focus,
+                        &:visited,
+                        &:focus-within,
+                        &:focus {
+                            border: none;
+                            cursor: pointer;
+                            background-color: #cfecfc;
+                        }
                         span.icon {
                             margin-right: 5px;
                             svg {
@@ -638,6 +650,111 @@
                         display: inline-flex;
                         justify-content: center;
                         margin: 15px 0px;
+                    }
+                }
+            }
+        }
+        .UserInfoModal{
+            border-radius: 1em;
+            background-color: #ffffff;
+            z-index: 99999;
+            position: absolute;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 0px 0px 1px 0px;
+            .Top{
+                display: flex;
+                justify-content: space-between;
+                img {
+                    width: 49px;
+                    height: 49px;
+                    border-radius: 50%;
+                }
+                .Button {
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        cursor: pointer;
+                        padding: 10px 15px;
+                        border: 1px solid #1da1f2;
+                        border-radius: 2em;
+                        background-color: #ffffff;
+                        color: #1a91da;
+                        font-weight: 800;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .Name {
+                font-size: 15px;
+                font-weight: 800;
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+            .Handle {
+                font-size: 15px;
+                color: #5b7083;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .Bio{
+                margin-top: 10px;
+                font-size: 15px;
+                font-stretch: 100%;
+
+            }
+            .Stats{
+                margin-top: 10px;
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+                padding-inline-end: 30px;
+                font-size: 15px;
+                color: #5b7083;
+                .Number{
+                    color: #000;
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                .Static{
+                    color: #5b7083;
+                    padding-inline-start: 3px;
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                margin-bottom: 10px;
+               
+            }
+            .MutualFollows{
+                font-size: 13px;
+                color: #5b7083;
+                display: flex;
+                justify-content: space-between;
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                .DpStack{
+                    display: flex;
+                    img{
+                        height: 19px;
+                        width: 19px;
+                        border-radius: 50%;
+                        position: relative;
+                    }
+                    .Img2{
+                        right: 9px;
+                    }
+                    .Img3{
+                        right: 15px;
                     }
                 }
             }

@@ -5,28 +5,39 @@ import { ReactComponent as LikeIcon }from "../icons/heart.svg";
 import { ReactComponent as ShareIcon }from "../icons/share.svg";
 import TweetInfoTop from "./TweetInfoTop";
 import AttachedImages from "./AttachedImages";
+import UserProfileModal from "./UserInfoModal";
 
-const showUserInfo = (e) => {
-    console.log(e);
-};
 
-const hideUserInfo = (userInfo) => {
-    console.log("hide modal");
-};
 
 const Tweet = ({content="", type, sender={handle:"nafiudanlawal", name:"Nafiu Lawal"}, time = '0s', tweetInfoTop, AttachedImagesProp = []}) => {
+    const { useState } = require("react");
     const tweetExtraInfoTop = tweetInfoTop ?? {icon : "", "text": ""};
-    
+    const [userProfile, setUserProfile] =  useState({display: "none", user_id: 1});
+    const [myText, setMyText] =  useState("");
+
+
+    const showUserInfo = ({user, position}) => {
+        setMyText(<UserProfileModal user_id={user} anchorPosition={position} />);
+
+    };
+    const mouseLocation = (e) => {
+        return { x: e.pageX, y: e.pageY };
+    };
+
     return(
         <article className="TweetItem">
             <TweetInfoTop  Icon="icon-bell icon" Text="retweeted by @jason_gunner" />
             <div className="TweetContent">
-                <div className="TweetItemDp" onMouseEnter={showUserInfo} onMouseLeave={hideUserInfo}>
-                    <img src="/images/dp-placeholder.jpg" alt="dp"/>
+                <div className="TweetItemDp">
+                    <img 
+                    onMouseEnter={(e) => {showUserInfo({user:"user_id", position:mouseLocation(e)}) }} 
+                    src="/images/dp-placeholder.jpg" alt="dp"/>
                 </div>
                 <div className="TweetItemContentColumn">
                     <div className="TweetTop">
-                        <div className="Sender" onMouseEnter={showUserInfo} onMouseLeave={hideUserInfo}>
+                        <div className="Sender" 
+                            onMouseEnter={(e) => {showUserInfo({user:"user_id", position:mouseLocation(e)}) }} 
+                            >
                             <span className="SenderName">{sender.name}</span> &nbsp;
                             <span className="SenderHandle">{sender.handle}</span>&nbsp;&nbsp;
                         </div>
@@ -46,6 +57,7 @@ const Tweet = ({content="", type, sender={handle:"nafiudanlawal", name:"Nafiu La
                     </div>
                 </div>
             </div>
+            <>{myText}</>
         </article>
     );
 }

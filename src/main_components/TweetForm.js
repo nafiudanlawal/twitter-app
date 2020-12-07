@@ -27,14 +27,16 @@ function TweetForm(props) {
         
         // Put text of count to maxLength
         if( value.length < maxLength  - 20){
-            if ( lengthPercentage >= 0 && lengthPercentage <= 100 ) {
+            if ( lengthPercentage >= 0 && lengthPercentage < 100 ) {
                 setProgressCirclePercentage(lengthPercentage)
+                setProgressCircleText("");
             }
         }else if(value.length > maxLength  - 20 && value.length <= maxLength){
             setProgressCirclePercentage(lengthPercentage);
             setProgressCircleText(maxLength -  value.length);
         }else{
-            
+            setProgressCirclePercentage(0);
+            setProgressCircleText(maxLength -  value.length);
         }
         
     };
@@ -50,7 +52,6 @@ function TweetForm(props) {
                 <div className="FormBody">
                     <div className="">
                         <TextareaAutosize 
-                        autoFocus 
                         value={text} 
                         placeholder="What's happening?"
                         onChange={textChanged}
