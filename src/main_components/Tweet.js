@@ -11,10 +11,7 @@ import UserProfileModal from "./UserInfoModal";
 
 const Tweet = ({content="", type, sender={handle:"nafiudanlawal", name:"Nafiu Lawal"}, time = '0s', tweetInfoTop, AttachedImagesProp = []}) => {
     const { useState } = require("react");
-    const tweetExtraInfoTop = tweetInfoTop ?? {icon : "", "text": ""};
-    const [userProfile, setUserProfile] =  useState({display: "none", user_id: 1});
     const [myText, setMyText] =  useState("");
-
 
     const showUserInfo = ({user, position}) => {
         setMyText(<UserProfileModal user_id={user} anchorPosition={position} />);

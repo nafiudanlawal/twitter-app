@@ -1,21 +1,23 @@
-import { Component } from 'react';
-
+import React, { Component } from 'react';
 class UserProfileModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            style: { top: props.anchorPosition.y + 5 + "px", left: props.anchorPosition.x + 5 + "px", display: "unset" }
+            style: { top: props.anchorPosition.y + 5 + "px", left: props.anchorPosition.x + 5 + "px", display: "unset" },
+            key: 1
         };
     }
 
     handleMouseLeave = () => {
-        this.setState({ style: { display: "none" } });
+        this.setState({ 
+            style: { display: "none" },
+            key: this.state.key++ 
+        });
         console.log("mouse left modal");
-        ++this.childKey;
     }
     render() {
         return (
-            <div className="UserInfoModal" style={this.state.style} onMouseLeave={this.handleMouseLeave}>
+            <div key={this.state.key} className="UserInfoModal" style={this.state.style} onMouseLeave={this.handleMouseLeave}>
                 <div className="Top">
                     <div className="dp">
                         <img src="/images/dp-placeholder.jpg" alt="" />

@@ -19,14 +19,14 @@ const Header = () => {
                 <div className="NavHolder">
                     <nav>
                         <ul className="list-group">
-                            <li><a href="#"><Menu title="Home" icon={<HomeIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Explore" icon={<HashtagIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Notifications" icon={<HashtagIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Messages" icon={<MailIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Bookmarks" icon={<BookmarkIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Lists" icon={<ListIcon />} /></a></li>
-                            <li><a href="#"><Menu title="Profile" icon={<UserIcon />} /></a></li>
-                            <li><a href="#"><Menu title="More" icon={<MoreIcon />} /></a></li>
+                            <li><Menu title="Home" icon={<HomeIcon />} link="/" /></li>
+                            <li><Menu title="Explore" icon={<HashtagIcon />} link="/explore"  /></li>
+                            <li><Menu title="Notifications" icon={<HashtagIcon />} link="/notifications" /></li>
+                            <li><Menu title="Messages" icon={<MailIcon />} link="/messages" /></li>
+                            <li><Menu title="Bookmarks" icon={<BookmarkIcon />} link="/bookmarks" /></li>
+                            <li><Menu title="Lists" icon={<ListIcon />} link="/lists" /></li>
+                            <li><Menu title="Profile" icon={<UserIcon />} link="/profile" /></li>
+                            <li><Menu title="More" icon={<MoreIcon />} link="/explore" /></li>
                         </ul>
                     </nav>
                 </div>
