@@ -7,37 +7,37 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import TrendingList from "./right-column/Trending";
 import Explore from "./Explore";
+import Notifications from "./Notifications";
 
 function App() {
 	return (
-		<div className="App">
-			<Router>
+		<Router>
+			<div className="App">
 				<Header />
-
 				<main>
 					<Switch>
-						<Route path="/" exact>
+						<Route path="/" exact="true">
 							<Home />
 						</Route>
-						<Route path="/explore" exact>
+						<Route path="/explore" exact="true">
 							<Explore />
 						</Route>
-						<Route path="/notifications" exact>
-							<div>notifications</div>
+						<Route path="/notifications">
+							<Notifications />
 						</Route>
-						<Route path="/messages" exact>
+						<Route path="/messages" exact="true">
 							<div>messages</div>
 						</Route>
-						<Route path="/bookmarks" exact>
+						<Route path="/bookmarks" exact="true">
 							<div>bookmarks</div>
 						</Route>
-						<Route path="/lists" exact>
+						<Route path="/lists" exact="true">
 							<div>Lists</div>
 						</Route>
 					</Switch>
 				</main>
-			</Router>
-		</div>
+			</div>
+		</Router>
 
 	);
 }
