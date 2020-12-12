@@ -3,7 +3,7 @@ const { default: Link } = require("./Link")
 const Footer = () => {
     
     return (
-        <div className="Footer">
+        <div className="MainFooter">
             <div className="Top">
                 <span><Link Href="#" Text="Terms of Service"/></span>
                 <span><Link Href="#" Text="Privacy Policy"/></span>
