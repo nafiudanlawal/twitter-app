@@ -4,7 +4,7 @@ const Menu = ({ icon, title, link="#" }) => {
   return (
     <div className="Menu">
       <div className="wrapper">
-        <Link className="Link" to={link} exact="true">
+        <Link className="Link" to={link}>
           <span className="icon">{icon}</span>
           <span className="title">{title}</span>
         </Link>

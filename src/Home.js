@@ -2,16 +2,17 @@ import PageTop from "./main_components/PageHeader";
 import TweetForm from "./main_components/TweetForm";
 import Tweet from "./main_components/Tweet";
 import MainRightColumn from "./right-column/Container";
+import { ReactComponent as HeaderIcon }from "./icons/spark.svg";
 
 const Home = (props) => {
     return (
         <div className="HomePage">
             <div className="main">
-                <PageTop />
+                <PageTop Text="Home" Icon={HeaderIcon}/>
                 <TweetForm />
                 <section className="Feeds">
                     <Tweet
-                        content={`Stack Overflow be like,
+                        Content={`Stack Overflow be like,
                       "I can explain it to you but I can't understand it for you."`}
                         AttachedImagesProp={["/images/sample-image.jpg"]}
                         sender={{ handle: "@addoDgh", name: "Addo Dankwah" }}
@@ -27,7 +28,7 @@ const Home = (props) => {
                     />
                     <Tweet />
                     <Tweet
-                        content={`I pray for peace before after and during the elections`}
+                        Content={`I pray for peace before after and during the elections`}
                         AttachedImagesProp={["/images/sample-image.jpg"]}
                         sender={{ handle: "@johnDmahama", name: "John Mahama" }}
                         time="15m"

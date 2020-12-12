@@ -1,10 +1,9 @@
-import { ReactComponent as Icon }from "../icons/spark.svg";
 
-function PageTop(){
+const PageTop = ({Text = "Home", Icon}) => {
     return (
         <div className="PageTop">
             <div className="text">
-                <span>Home</span>
+                <span>{Text}</span>
             </div>
             <div className="right-icon">
                 <Icon />

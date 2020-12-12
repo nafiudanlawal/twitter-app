@@ -5,7 +5,6 @@ import Header from "./left-column/Header";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import TrendingList from "./right-column/Trending";
 import Explore from "./Explore";
 import Notifications from "./Notifications";
 
@@ -16,22 +15,22 @@ function App() {
 				<Header />
 				<main>
 					<Switch>
-						<Route path="/" exact="true">
+						<Route path="/" exact={true}>
 							<Home />
 						</Route>
-						<Route path="/explore" exact="true">
+						<Route path="/explore" exact={true}>
 							<Explore />
 						</Route>
 						<Route path="/notifications">
 							<Notifications />
 						</Route>
-						<Route path="/messages" exact="true">
+						<Route path="/messages" exact={true}>
 							<div>messages</div>
 						</Route>
-						<Route path="/bookmarks" exact="true">
+						<Route path="/bookmarks" exact={true}>
 							<div>bookmarks</div>
 						</Route>
-						<Route path="/lists" exact="true">
+						<Route path="/lists" exact={true}>
 							<div>Lists</div>
 						</Route>
 					</Switch>
