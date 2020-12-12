@@ -649,10 +649,12 @@
                 border-right: 1px solid #ebeef0;
                 border-left: 1px solid #ebeef0;
                 box-sizing: border-box;
+                background-color: #ebeef0;
                 .PageTop{
                     display: flex;
                     justify-content: space-between ;
                     padding: 0px 20px;
+                    background-color: #ebeef0;
                     padding-bottom: 10px;
                     padding-top: 0.5rem;
                     height: 2.2em;
@@ -692,7 +694,7 @@
                     }
                     
                 }
-                .Top{
+                .TopHeader{
                     background-color: #ebeef0;
                     margin-bottom: -65px;
                     .Text{
@@ -839,6 +841,72 @@
                     }
                 }
                 .Topics{
+                    background-color: #ffffff;
+                    margin-bottom: 5px;
+                    .Heading{
+                        padding: 0px 10px;
+                        height: 50px;
+                        border-top: 1px solid #ebeef0;
+                        border-bottom: 1px solid #ebeef0;
+                        background-color: #ffffff;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        .Icon{
+                            
+                            display: block;
+                            padding-right: 10px;
+                            svg{
+                                width: 23px;
+                                height: 20px;
+                                fill:#1da1f2;
+                            }
+                        }
+                        .Text{
+                            font-weight: 800;
+                            font-size: 18px;
+                        }
+                    }
+                    .Bottom{
+                        padding: 0px 10px;
+                        height: 50px;
+                        border-top: 1px solid #ebeef0;
+                        border-bottom: 1px solid #ebeef0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .Right{
+                            display: flex;
+                            .Icon{
+                                display: block;
+                                padding-right: 10px;
+                                svg{
+                                    width: 25px;
+                                    height: 25px;
+                                    fill:#1da1f2;
+                                }
+                            }
+                            .Text{
+                                font-weight: 800;
+                                font-size: 18px;
+                            }
+                        }
+                        .Button {
+                            display: flex;
+                            align-items: center;
+
+                            button {
+                                cursor: pointer;
+                                padding: 5px 15px;
+                                border: 1px solid #1da1f2;
+                                border-radius: 2em;
+                                background-color: #1a91da;
+                                color: #f6f5fe;
+                                font-weight: 800;
+                                font-size: 15px;
+                            }
+                        }
+                    }
                     .TweetItem {
                         border-bottom: 1px solid #ebeef0;
                         padding: 0px 15px;
@@ -1094,7 +1162,7 @@
         .UserInfoModal {
             border-radius: 1em;
             background-color: #ffffff;
-            z-index: 99999;
+            z-index: 99999999;
             position: absolute;
             width: 250px;
             padding: 10px;
