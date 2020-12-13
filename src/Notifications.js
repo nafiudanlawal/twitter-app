@@ -37,7 +37,10 @@ const NotificationsList = (props) => {
         <div className="Notifications">
             <Notification Type="reply" />
             <Notification Type="like" />
-            <Notification Type="reply" />
+            <Notification Type="retweet" />
+            <Notification Type="follow" />
+            <Notification Type="follow" />
+            <Notification Type="comment" />
         </div>
     );
 }

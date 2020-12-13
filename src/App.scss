@@ -1201,8 +1201,6 @@
                         border-bottom: 1px solid #ebeef0;
                         padding: 10px 15px;
                         .TweetItem {
-                            border-bottom: 1px solid #ebeef0;
-                            padding: 10px 15px;
                             .TweetExtraInfo {
                                 padding-left: 40px;
                                 margin-top: 3px;
@@ -1369,6 +1367,7 @@
                             width: calc(100% - 50px);
                             .Top{
                                 margin-bottom: 10px;
+                                font-size: 15px;
                                 .Icons{
                                     img{
                                         width: 30px;
@@ -1385,8 +1384,67 @@
                         }
                     }
                     .NotificationItem.Retweet{
-                        .Top{
+                        display: flex;
+                        .Right{
+                            width: 50px;
+                            margin-right: 5px;
                             display: flex;
+                            justify-content: flex-end;
+                            svg{
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                fill: #17bf63;
+                            }
+                        }
+                        .Content{
+                            width: calc(100% - 50px);
+                            .Top{
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                .Icons{
+                                    img{
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                        margin:0px 5px;
+                                    }
+                                }
+                            }
+                            .Text{
+                                color: #5b7083;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .NotificationItem.Follow{
+                        display: flex;
+                        .Right{
+                            width: 50px;
+                            margin-right: 5px;
+                            display: flex;
+                            justify-content: flex-end;
+                            svg{
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                fill:#1a91da;
+                            }
+                        }
+                        .Content{
+                            width: calc(100% - 50px);
+                            .Top{
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                .Icons{
+                                    img{
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                        margin:0px 5px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
