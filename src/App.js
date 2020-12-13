@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import Explore from "./Explore";
 import Notifications from "./Notifications";
+import Messages from "./Messages";
 
 function App() {
 	return (
@@ -24,8 +25,8 @@ function App() {
 						<Route path="/notifications">
 							<Notifications />
 						</Route>
-						<Route path="/messages" exact={true}>
-							<div>messages</div>
+						<Route path="/messages">
+							<Messages />
 						</Route>
 						<Route path="/bookmarks" exact={true}>
 							<div>bookmarks</div>

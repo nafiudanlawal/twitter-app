@@ -281,7 +281,7 @@
             .RightSide {
                 width: 350px;
                 padding: 10px 0px 0px 23px;
-                
+
                 .Search {
                     border: none;
                     width: 100%;
@@ -642,7 +642,7 @@
         .ExplorePage {
             display: flex;
             flex-wrap: wrap;
-            img{
+            img {
                 width: 100%;
             }
             .Main {
@@ -652,15 +652,15 @@
                 box-sizing: border-box;
                 background-color: #ebeef0;
                 display: inline-table;
-                .PageTop{
+                .PageTop {
                     display: flex;
-                    justify-content: space-between ;
+                    justify-content: space-between;
                     padding: 0px 20px;
                     background-color: #ebeef0;
                     padding-bottom: 10px;
                     padding-top: 0.5rem;
                     height: 2.2em;
-                    .Head{
+                    .Head {
                         width: 90%;
                         .Search {
                             border: none;
@@ -694,22 +694,21 @@
                             }
                         }
                     }
-                    
                 }
-                .TopHeader{
+                .TopHeader {
                     background-color: #ebeef0;
                     margin-bottom: -65px;
-                    .Text{
+                    .Text {
                         position: relative;
                         bottom: 80px;
                         color: #ffffff;
                         padding-left: 15px;
-                        .Title{
+                        .Title {
                             font-size: 13px;
                             font-weight: 300;
                             line-height: 19px;
                         }
-                        .Content{
+                        .Content {
                             font-weight: 800;
                             font-size: 19px;
                             margin: 2px 0px;
@@ -823,14 +822,13 @@
                             font-weight: 800;
                             margin: 10px 0px;
                         }
-                        .CoverImage{
-                            img{
+                        .CoverImage {
+                            img {
                                 width: 85px;
                                 height: 85px;
                                 border-radius: 1em;
                             }
                         }
-                        
                     }
                     .Footer {
                         padding: 10px;
@@ -842,10 +840,10 @@
                         }
                     }
                 }
-                .Topics{
+                .Topics {
                     background-color: #ffffff;
                     margin-bottom: 5px;
-                    .Heading{
+                    .Heading {
                         padding: 0px 10px;
                         height: 50px;
                         border-top: 1px solid #ebeef0;
@@ -854,22 +852,21 @@
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
-                        .Icon{
-                            
+                        .Icon {
                             display: block;
                             padding-right: 10px;
-                            svg{
+                            svg {
                                 width: 23px;
                                 height: 20px;
-                                fill:#1da1f2;
+                                fill: #1da1f2;
                             }
                         }
-                        .Text{
+                        .Text {
                             font-weight: 800;
                             font-size: 18px;
                         }
                     }
-                    .Bottom{
+                    .Bottom {
                         padding: 0px 10px;
                         height: 50px;
                         border-top: 1px solid #ebeef0;
@@ -877,18 +874,18 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        .Right{
+                        .Right {
                             display: flex;
-                            .Icon{
+                            .Icon {
                                 display: block;
                                 padding-right: 10px;
-                                svg{
+                                svg {
                                     width: 25px;
                                     height: 25px;
-                                    fill:#1da1f2;
+                                    fill: #1da1f2;
                                 }
                             }
-                            .Text{
+                            .Text {
                                 font-weight: 800;
                                 font-size: 18px;
                             }
@@ -1060,9 +1057,6 @@
                         }
                     }
                 }
-                
-               
-                
             }
             .RightSide {
                 width: 350px;
@@ -1169,10 +1163,10 @@
                 border-left: 1px solid #ebeef0;
                 box-sizing: border-box;
                 display: inline-table;
-                .SubMenus{
+                .SubMenus {
                     display: flex;
                     align-items: center;
-                    span{
+                    span {
                         width: 50%;
                         .Link {
                             display: flex;
@@ -1188,16 +1182,16 @@
                                 background-color: #e6f5fe;
                             }
                         }
-                        .active{
+                        .active {
                             border-bottom: 2px solid #1a91da;
                             color: #1a91da;
                         }
                     }
                 }
-                .Notifications{
+                .Notifications {
                     border-top: 1px solid #ebeef0;
                     margin-bottom: 2em;
-                    .NotificationItem{
+                    .NotificationItem {
                         border-bottom: 1px solid #ebeef0;
                         padding: 10px 15px;
                         .TweetItem {
@@ -1223,7 +1217,7 @@
                                     display: flex;
                                     justify-content: center;
                                     margin-right: 5px;
-    
+
                                     img {
                                         width: 49px;
                                         height: 49px;
@@ -1237,7 +1231,7 @@
                                 .TweetItemContentColumn {
                                     width: 100%;
                                     padding-left: 5px;
-    
+
                                     .TweetTop {
                                         font-size: 14px;
                                         .Sender {
@@ -1264,7 +1258,7 @@
                                     .TweetContentDetail {
                                         font-size: 15px;
                                         padding: 1px 0px;
-    
+
                                         .AttachedImage {
                                             height: 285.5px;
                                             overflow: hidden;
@@ -1349,99 +1343,99 @@
                             }
                         }
                     }
-                    .NotificationItem.Like{
+                    .NotificationItem.Like {
                         display: flex;
-                        .Right{
+                        .Right {
                             width: 50px;
                             margin-right: 5px;
                             display: flex;
                             justify-content: flex-end;
-                            svg{
+                            svg {
                                 display: inline-block;
                                 width: 30px;
                                 height: 30px;
                                 fill: #e0245e;
                             }
                         }
-                        .Content{
+                        .Content {
                             width: calc(100% - 50px);
-                            .Top{
+                            .Top {
                                 margin-bottom: 10px;
                                 font-size: 15px;
-                                .Icons{
-                                    img{
+                                .Icons {
+                                    img {
                                         width: 30px;
                                         height: 30px;
                                         border-radius: 50%;
-                                        margin:0px 5px;
+                                        margin: 0px 5px;
                                     }
                                 }
                             }
-                            .Text{
+                            .Text {
                                 color: #5b7083;
                                 font-size: 15px;
                             }
                         }
                     }
-                    .NotificationItem.Retweet{
+                    .NotificationItem.Retweet {
                         display: flex;
-                        .Right{
+                        .Right {
                             width: 50px;
                             margin-right: 5px;
                             display: flex;
                             justify-content: flex-end;
-                            svg{
+                            svg {
                                 display: inline-block;
                                 width: 30px;
                                 height: 30px;
                                 fill: #17bf63;
                             }
                         }
-                        .Content{
+                        .Content {
                             width: calc(100% - 50px);
-                            .Top{
+                            .Top {
                                 margin-bottom: 10px;
                                 font-size: 15px;
-                                .Icons{
-                                    img{
+                                .Icons {
+                                    img {
                                         width: 30px;
                                         height: 30px;
                                         border-radius: 50%;
-                                        margin:0px 5px;
+                                        margin: 0px 5px;
                                     }
                                 }
                             }
-                            .Text{
+                            .Text {
                                 color: #5b7083;
                                 font-size: 15px;
                             }
                         }
                     }
-                    .NotificationItem.Follow{
+                    .NotificationItem.Follow {
                         display: flex;
-                        .Right{
+                        .Right {
                             width: 50px;
                             margin-right: 5px;
                             display: flex;
                             justify-content: flex-end;
-                            svg{
+                            svg {
                                 display: inline-block;
                                 width: 30px;
                                 height: 30px;
-                                fill:#1a91da;
+                                fill: #1a91da;
                             }
                         }
-                        .Content{
+                        .Content {
                             width: calc(100% - 50px);
-                            .Top{
+                            .Top {
                                 margin-bottom: 10px;
                                 font-size: 15px;
-                                .Icons{
-                                    img{
+                                .Icons {
+                                    img {
                                         width: 30px;
                                         height: 30px;
                                         border-radius: 50%;
-                                        margin:0px 5px;
+                                        margin: 0px 5px;
                                     }
                                 }
                             }
@@ -1606,7 +1600,7 @@
             .RightSide {
                 width: 350px;
                 padding: 10px 0px 0px 23px;
-                
+
                 .Search {
                     border: none;
                     width: 100%;
@@ -1964,6 +1958,281 @@
                 }
             }
         }
+        .MessagesPage {
+            display: flex;
+            .main {
+                width: 378px;
+                border-right: 1px solid #ebeef0;
+                border-left: 1px solid #ebeef0;
+                box-sizing: border-box;
+                display: inline-table;
+                height: 100%;
+                .PageTop {
+                    border-bottom: 1px solid #bbb;
+                }
+                .SubAction {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 15px;
+                    align-items: center;
+                    height: 30px;
+                    border-bottom: 1px solid #ebeef0;
+                    padding: 10px;
+                    &:hover {
+                        background-color: #f7f9fa;
+                    }
+                    .Link {
+                        text-decoration: none;
+
+                        cursor: pointer;
+                        font-size: 15px;
+                        line-height: 15px;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        &:active,
+                        &:visited {
+                            color: #000;
+                        }
+                    }
+                    svg {
+                        display: flex;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                .SearchContainer {
+                    padding: 10px 10px 0px 10px;
+                    border-bottom: 1px solid #e6f5fe;
+                    .Search {
+                        border: none;
+                        width: 100%;
+                        overflow-x: hidden;
+                        height: 37px;
+                        display: flex;
+                        border-radius: 2em;
+                        font-size: 15px;
+                        margin-bottom: 10px;
+                        &:focus-within{
+                            background-color: #ffffff;
+                            border: 1px solid #1da1f2;
+                            height: 35px;
+                            width: calc(100% - 2px);
+                            input,
+                            .SearchButton {
+                                background-color: #ffffff !important;
+                                span {
+                                    background-color: #ffffff !important;
+                                    svg {
+                                        fill: #1a91da !important;
+                                    }
+                                }
+                            }
+                        }
+                        input {
+                            width: 100%;
+                            overflow: hidden;
+                            border: none;
+                            font-size: 15px;
+                            outline: none;
+                        }
+                        .SearchButton {
+                            padding: 10px 5px;
+                            display: flex;
+                            span {
+                                margin-left: 8px;
+                                width: 22.5px;
+                                color: #ffffff;
+                                height: 22.5px;
+                                svg {
+                                    width: 18px;
+                                    height: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .RightSide {
+                width: 600px;
+                padding: 10px 0px 0px 23px;
+            }
+            .TweetForm {
+                width: 100%;
+                padding: 5px 0px;
+                border-bottom: 1px solid #ebeef0;
+                margin-bottom: 5px;
+                .LeftDP {
+                    padding: 1em;
+                    display: inline;
+                    .DpHolder {
+                        display: inline-flex;
+                        float: left;
+                        padding: 3px 10px;
+                        margin-right: 5px;
+                        &:hover {
+                            cursor: pointer;
+                            img {
+                                filter: brightness(0.9);
+                            }
+                        }
+                        img {
+                            border-radius: 50%;
+                            width: 49px;
+                            height: 49px;
+                        }
+                    }
+                }
+                .ProgressRing {
+                    transition: 0.35s stroke-dashoffset;
+                    transform: rotate(-90deg);
+                    transform-origin: 50% 50%;
+                    width: 150px;
+                    height: 150px;
+                }
+                .FormArea {
+                    display: inline-block;
+                    width: calc(100% - 100px);
+                    .FormBody {
+                        .divider {
+                            height: 1px;
+                            background-color: #ebeef0;
+                            width: 100%;
+                        }
+                        .PublicityButton {
+                            color: #1da1f2;
+                            background: inherit;
+                            border: none;
+                            padding: 2px 5px;
+                            border-radius: 2em;
+                            line-height: 1em;
+                            font-size: 0.8em;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &:visited,
+                            &:focus-within,
+                            &:focus {
+                                border: none;
+                                cursor: pointer;
+                                background-color: #cfecfc;
+                            }
+                            span.icon {
+                                margin-right: 5px;
+                                svg {
+                                    color: #1da1f2;
+                                    fill: currentColor;
+                                }
+                            }
+                        }
+                        textarea {
+                            width: 100%;
+                            border: none;
+                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+                                sans-serif;
+                            font-size: 19px;
+                            &:active,
+                            &:focus,
+                            &:focus-within,
+                            &:focus {
+                                border: none;
+                            }
+                            border: none;
+                            overflow: auto;
+                            outline: none;
+                            -webkit-box-shadow: none;
+                            -moz-box-shadow: none;
+                            box-shadow: none;
+                            resize: none;
+                        }
+                    }
+                    .FormBottom {
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                        }
+                        .PlusIcon {
+                            width: 28px;
+                            height: 28px;
+                            color: #1da1f2;
+                            fill: currentColor;
+                        }
+                        .SubmitBtn {
+                            background-color: #1da1f2;
+                            border-radius: 25px;
+                            border: none;
+                            color: #ffffff;
+                            padding: 10px 22px;
+                            font-size: 1em;
+                            font-weight: 800;
+                            overflow: auto;
+                            outline: none;
+                            box-shadow: none;
+                            &:active,
+                            &:focus,
+                            &:focus-within,
+                            &:focus {
+                                border: none;
+                                background-color: #1a91da;
+                            }
+                            &:hover {
+                                background-color: #1a91da;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .IconsHolder {
+                        display: inline-block;
+                        .IconButtonsList {
+                            list-style: none;
+                            display: flex;
+                            justify-content: flex-start;
+                            padding-left: 0px;
+                            .IconButtonsListItem {
+                                height: 22.5px;
+                                width: 37px;
+                                height: 37px;
+                                display: flex;
+                                justify-content: center;
+                                svg {
+                                    width: 24px;
+                                    color: #1da1f2;
+                                    fill: currentColor;
+                                }
+                            }
+                        }
+                    }
+                    .FloatRightSide {
+                        float: right;
+
+                        .TextContentStat {
+                            display: inline-flex;
+                            justify-content: center;
+                            margin: 15px 0px;
+                            justify-content: center;
+                            height: 37px;
+                            margin: 15px 0px;
+                            align-items: center;
+                            .VerticalDivider {
+                                width: 1px;
+                                background-color: #ebeef0;
+                                height: 100%;
+                                margin: 0px 5px;
+                            }
+                            margin-right: 10px;
+                        }
+                        .SubmitBtnHolder {
+                            display: inline-flex;
+                            justify-content: center;
+                            margin: 15px 0px;
+                        }
+                    }
+                }
+            }
+        }
         .UserInfoModal {
             border-radius: 1em;
             background-color: #ffffff;
@@ -2105,17 +2374,17 @@
         }
     }
 }
-.ReplyingTo{
+.ReplyingTo {
     font-size: 15px;
     color: #5b7083;
     display: block;
     margin: 5px 0px;
-    .UserHandle{
+    .UserHandle {
         color: #1a91da;
     }
 }
 
-.seperator-grey{
+.seperator-grey {
     width: 100%;
     height: 10px;
     background-color: darkgray;
