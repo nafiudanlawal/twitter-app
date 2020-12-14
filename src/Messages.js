@@ -4,6 +4,7 @@ import PageTop from "./main_components/PageHeader";
 import { ReactComponent as SearchIcon } from "./icons/magnifier.svg";
 import { ReactComponent as ArrowRightIcon } from "./icons/arrow-right.svg";
 import SearchBox from "./right-column/SearchTweeter";
+import MessageShort from "./main_components/MessageShort";
 
 const Messages = props => {
     return (
@@ -13,14 +14,40 @@ const Messages = props => {
 
                 <Switch>
                     <Route path="/messages" exact={true}>
-                        <div className="SubAction">
-                            <Link className="Link" to="/messages/requests">Messages requests</Link>
-                            <ArrowRightIcon />
+                        <div className="PageContentRight">
+                            <div className="SubAction">
+                                <Link className="Link" to="/messages/requests">Messages requests</Link>
+                                <ArrowRightIcon />
+                            </div>
+                            <div className="SearchContainer">
+                                <SearchBox Icon={<SearchIcon />} placholder="Search Twitter" />
+                            </div>
+                            <div className="MessagesBox">
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                                <MessageShort />
+                            </div>
                         </div>
-                        <div className="SearchContainer">
-                            <SearchBox Icon={<SearchIcon />} placholder="Search Twitter" />
-                        </div>
-                        <div>Users</div>
                     </Route>
                     <Route path="/messages/requests" exact={true}>
                         <div>Request</div>
@@ -28,10 +55,20 @@ const Messages = props => {
                 </Switch>
             </div>
             <div className="RightSide">
-                <div>Message Chats</div>
+                <div className="ChatContent">
+                    {(props.Chatid == undefined) ? <NoChatSelected /> : "Chat Selected"}
+                </div>
             </div>
         </div>
     );
 }
-
+const NoChatSelected = props => {
+    return (
+        <div className="NoChatSelected">
+            <div className="Head">You don’t have a message selected</div>
+            <div className="Bottom"> Choose one from your existing messages, or start a new one.</div>
+            <div className="NewMessageBtn"><button className="TweetBtnLarge">New Message</button></div>
+        </div>
+    );
+}
 export default Messages;

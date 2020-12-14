@@ -123,152 +123,162 @@
                 border-left: 1px solid #ebeef0;
                 box-sizing: border-box;
                 display: inline-table;
-                .Feeds {
-                    border-top: 1px solid #ebeef0;
-                    margin-bottom: 2em;
-                    .TweetItem {
-                        border-bottom: 1px solid #ebeef0;
-                        padding: 10px 15px;
-                        .TweetExtraInfo {
-                            padding-left: 40px;
-                            margin-top: 3px;
-                            .TweetExtraText {
-                                font-size: 13px;
-                                color: #5b7083;
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 8px;
-                            }
-                            i {
-                                width: 13px;
-                                height: 13px;
-                                margin-right: 8px;
-                            }
-                        }
-                        .TweetContent {
-                            display: flex;
-                            .TweetItemDp {
-                                display: flex;
-                                justify-content: center;
-                                margin-right: 5px;
-
-                                img {
-                                    width: 49px;
-                                    height: 49px;
-                                    border-radius: 50%;
-                                    &:hover {
-                                        cursor: pointer;
-                                        filter: brightness(0.9);
-                                    }
+                .PageContent {
+                    height: calc(100vh - 55px);
+                    overflow-y: scroll;
+                    scrollbar-width: 0px;
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .Feeds {
+                        border-top: 1px solid #ebeef0;
+                        margin-bottom: 2em;
+                        .TweetItem {
+                            border-bottom: 1px solid #ebeef0;
+                            padding: 10px 15px;
+                            .TweetExtraInfo {
+                                padding-left: 40px;
+                                margin-top: 3px;
+                                .TweetExtraText {
+                                    font-size: 13px;
+                                    color: #5b7083;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 8px;
+                                }
+                                i {
+                                    width: 13px;
+                                    height: 13px;
+                                    margin-right: 8px;
                                 }
                             }
-                            .TweetItemContentColumn {
-                                width: 100%;
-                                padding-left: 5px;
+                            .TweetContent {
+                                display: flex;
+                                .TweetItemDp {
+                                    display: flex;
+                                    justify-content: center;
+                                    margin-right: 5px;
 
-                                .TweetTop {
-                                    font-size: 14px;
-                                    .Sender {
-                                        display: inline-flex;
+                                    img {
+                                        width: 49px;
+                                        height: 49px;
+                                        border-radius: 50%;
                                         &:hover {
                                             cursor: pointer;
+                                            filter: brightness(0.9);
+                                        }
+                                    }
+                                }
+                                .TweetItemContentColumn {
+                                    width: 100%;
+                                    padding-left: 5px;
+
+                                    .TweetTop {
+                                        font-size: 14px;
+                                        .Sender {
+                                            display: inline-flex;
+                                            &:hover {
+                                                cursor: pointer;
+                                                .SenderName {
+                                                    text-decoration: underline;
+                                                }
+                                            }
                                             .SenderName {
-                                                text-decoration: underline;
+                                                font-weight: 800;
+                                            }
+                                            .SenderHandle {
+                                                font-weight: 500;
+                                                color: #5b7083;
                                             }
                                         }
-                                        .SenderName {
-                                            font-weight: 800;
-                                        }
-                                        .SenderHandle {
+                                        .SendTime {
                                             font-weight: 500;
                                             color: #5b7083;
                                         }
                                     }
-                                    .SendTime {
-                                        font-weight: 500;
-                                        color: #5b7083;
-                                    }
-                                }
-                                .TweetContentDetail {
-                                    font-size: 15px;
-                                    padding: 1px 0px;
+                                    .TweetContentDetail {
+                                        font-size: 15px;
+                                        padding: 1px 0px;
 
-                                    .AttachedImage {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        img {
-                                            width: 100%;
-                                            object-fit: cover;
+                                        .AttachedImage {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
                                             border-radius: 1em;
+                                            img {
+                                                width: 100%;
+                                                object-fit: cover;
+                                                border-radius: 1em;
+                                            }
                                         }
-                                    }
-                                    .AttachedImage2 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        flex-flow: wrap;
-                                        justify-content: space-between;
-                                        img {
-                                            width: calc(50% - 1px);
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .AttachedImage3 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        flex-flow: wrap;
-                                        img {
-                                            width: calc(50% - 1px);
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .AttachedImage4 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        flex-flow: wrap;
-                                        img {
-                                            width: calc(50% - 2px);
-                                            height: 50%;
-                                            margin: 1px;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-                                .TweetActions {
-                                    padding: 0px 100px 10px 0px;
-                                    margin-top: 10px;
-                                    .Actions {
-                                        list-style: none;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        padding-left: 0px;
-                                        .ActionItem {
+                                        .AttachedImage2 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
                                             display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            .Text {
-                                                font-size: 13px;
-                                                color: #5b7083;
+                                            flex-flow: wrap;
+                                            justify-content: space-between;
+                                            img {
+                                                width: calc(50% - 1px);
+                                                object-fit: cover;
                                             }
-                                            span {
-                                                margin: 0px 5px;
+                                        }
+                                        .AttachedImage3 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            flex-flow: wrap;
+                                            img {
+                                                width: calc(50% - 1px);
+                                                object-fit: cover;
                                             }
-                                            svg {
-                                                width: 18px;
-                                                height: 18px;
-                                                display: inline;
+                                        }
+                                        .AttachedImage4 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            flex-flow: wrap;
+                                            img {
+                                                width: calc(50% - 2px);
+                                                height: 50%;
+                                                margin: 1px;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+                                    .TweetActions {
+                                        padding: 0px 100px 10px 0px;
+                                        margin-top: 10px;
+                                        .Actions {
+                                            list-style: none;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            padding-left: 0px;
+                                            .ActionItem {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                .Text {
+                                                    font-size: 13px;
+                                                    color: #5b7083;
+                                                }
+                                                span {
+                                                    margin: 0px 5px;
+                                                }
+                                                svg {
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    display: inline;
+                                                }
                                             }
                                         }
                                     }
@@ -281,7 +291,14 @@
             .RightSide {
                 width: 350px;
                 padding: 10px 0px 0px 23px;
-
+                height: calc(100vh - 5px);
+                overflow-y: scroll;
+                scrollbar-width: 0px;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }
                 .Search {
                     border: none;
                     width: 100%;
@@ -652,11 +669,12 @@
                 box-sizing: border-box;
                 background-color: #ebeef0;
                 display: inline-table;
+
                 .PageTop {
                     display: flex;
                     justify-content: space-between;
                     padding: 0px 20px;
-                    background-color: #ebeef0;
+                    background-color: #ffffff;
                     padding-bottom: 10px;
                     padding-top: 0.5rem;
                     height: 2.2em;
@@ -695,193 +713,179 @@
                         }
                     }
                 }
-                .TopHeader {
-                    background-color: #ebeef0;
-                    margin-bottom: -65px;
-                    .Text {
-                        position: relative;
-                        bottom: 80px;
-                        color: #ffffff;
-                        padding-left: 15px;
-                        .Title {
-                            font-size: 13px;
-                            font-weight: 300;
-                            line-height: 19px;
-                        }
-                        .Content {
-                            font-weight: 800;
-                            font-size: 19px;
-                            margin: 2px 0px;
-                        }
+                .PageContent {
+                    height: calc(100vh - 55px);
+                    overflow-y: scroll;
+                    scrollbar-width: 0px;
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none;
                     }
-                }
-                .TrendingList {
-                    margin: 5px 0px;
-                    min-height: 300px;
-                    background-color: #ffffff;
-                    border-bottom: 1px solid #ebeef0;
-                    .Heading {
-                        border-bottom: 1px solid #ebeef0;
-                        .Content {
-                            width: calc(100% - 30px);
-                            height: 30px;
-                            padding: 10px 15px;
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                        .title {
-                            font-size: 19px;
-                            align-self: center;
-                            font-weight: 800;
-                        }
-                        .icon {
-                            width: 22.5px;
-                            height: 22.5px;
-                            padding: 10px;
-                            svg {
-                                display: inline-block;
-                                fill: #1da1f2;
-                            }
-                        }
-                    }
-                    .ListItem {
-                        cursor: pointer;
-                        padding: 5px 15px;
-                        border-bottom: 2px solid #ebeef0;
-                        .Source {
-                            font-size: 13px;
-                            color: #5b7083;
-                            margin: 3px 0px;
-                        }
-                        .Topic {
-                            font-size: 15px;
-                            font-weight: 800;
-                            margin: 10px 0px;
-                        }
-                        .Stats {
-                            font-size: 13px;
-                            color: #5b7083;
-                            margin: 3px 0px;
-                        }
-                    }
-                    .Footer {
-                        padding: 10px;
-                        a {
-                            text-decoration: none;
-                            cursor: pointer;
-                            color: #1da1f2;
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .NewsList {
-                    margin: 5px 0px;
-                    min-height: 300px;
-                    background-color: #ffffff;
-                    border-bottom: 1px solid #ebeef0;
-                    .Heading {
-                        border-bottom: 1px solid #ebeef0;
-                        .Content {
-                            width: calc(100% - 30px);
-                            height: 30px;
-                            padding: 10px 15px;
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                        .title {
-                            font-size: 19px;
-                            align-self: center;
-                            font-weight: 800;
-                        }
-                        .icon {
-                            width: 22.5px;
-                            height: 22.5px;
-                            padding: 10px;
-                            svg {
-                                display: inline-block;
-                                fill: #1da1f2;
-                            }
-                        }
-                    }
-                    .NewsItem {
-                        display: flex;
-                        justify-content: space-between;
-                        cursor: pointer;
-                        padding: 5px 15px;
-                        border-bottom: 2px solid #ebeef0;
-                        .Topic {
-                            font-size: 13px;
-                            font-weight: 400;
-                            font-stretch: 100%;
-                            color: #5b7083;
-                            margin: 3px 0px;
-                            text-transform: uppercase;
-                        }
-                        .Headline {
-                            font-size: 15px;
-                            font-weight: 800;
-                            margin: 10px 0px;
-                        }
-                        .CoverImage {
-                            img {
-                                width: 85px;
-                                height: 85px;
-                                border-radius: 1em;
-                            }
-                        }
-                    }
-                    .Footer {
-                        padding: 10px;
-                        a {
-                            text-decoration: none;
-                            cursor: pointer;
-                            color: #1da1f2;
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .Topics {
-                    background-color: #ffffff;
-                    margin-bottom: 5px;
-                    .Heading {
-                        padding: 0px 10px;
-                        height: 50px;
-                        border-top: 1px solid #ebeef0;
-                        border-bottom: 1px solid #ebeef0;
-                        background-color: #ffffff;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        .Icon {
-                            display: block;
-                            padding-right: 10px;
-                            svg {
-                                width: 23px;
-                                height: 20px;
-                                fill: #1da1f2;
-                            }
-                        }
+
+                    .TopHeader {
+                        background-color: #ebeef0;
+                        margin-bottom: -65px;
                         .Text {
-                            font-weight: 800;
-                            font-size: 18px;
+                            position: relative;
+                            bottom: 80px;
+                            color: #ffffff;
+                            padding-left: 15px;
+                            .Title {
+                                font-size: 13px;
+                                font-weight: 300;
+                                line-height: 19px;
+                            }
+                            .Content {
+                                font-weight: 800;
+                                font-size: 19px;
+                                margin: 2px 0px;
+                            }
                         }
                     }
-                    .Bottom {
-                        padding: 0px 10px;
-                        height: 50px;
-                        border-top: 1px solid #ebeef0;
+                    .TrendingList {
+                        margin: 5px 0px;
+                        min-height: 300px;
+                        background-color: #ffffff;
                         border-bottom: 1px solid #ebeef0;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        .Right {
+                        .Heading {
+                            border-bottom: 1px solid #ebeef0;
+                            .Content {
+                                width: calc(100% - 30px);
+                                height: 30px;
+                                padding: 10px 15px;
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            .title {
+                                font-size: 19px;
+                                align-self: center;
+                                font-weight: 800;
+                            }
+                            .icon {
+                                width: 22.5px;
+                                height: 22.5px;
+                                padding: 10px;
+                                svg {
+                                    display: inline-block;
+                                    fill: #1da1f2;
+                                }
+                            }
+                        }
+                        .ListItem {
+                            cursor: pointer;
+                            padding: 5px 15px;
+                            border-bottom: 2px solid #ebeef0;
+                            .Source {
+                                font-size: 13px;
+                                color: #5b7083;
+                                margin: 3px 0px;
+                            }
+                            .Topic {
+                                font-size: 15px;
+                                font-weight: 800;
+                                margin: 10px 0px;
+                            }
+                            .Stats {
+                                font-size: 13px;
+                                color: #5b7083;
+                                margin: 3px 0px;
+                            }
+                        }
+                        .Footer {
+                            padding: 10px;
+                            a {
+                                text-decoration: none;
+                                cursor: pointer;
+                                color: #1da1f2;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .NewsList {
+                        margin: 5px 0px;
+                        min-height: 300px;
+                        background-color: #ffffff;
+                        border-bottom: 1px solid #ebeef0;
+                        .Heading {
+                            border-bottom: 1px solid #ebeef0;
+                            .Content {
+                                width: calc(100% - 30px);
+                                height: 30px;
+                                padding: 10px 15px;
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            .title {
+                                font-size: 19px;
+                                align-self: center;
+                                font-weight: 800;
+                            }
+                            .icon {
+                                width: 22.5px;
+                                height: 22.5px;
+                                padding: 10px;
+                                svg {
+                                    display: inline-block;
+                                    fill: #1da1f2;
+                                }
+                            }
+                        }
+                        .NewsItem {
                             display: flex;
+                            justify-content: space-between;
+                            cursor: pointer;
+                            padding: 5px 15px;
+                            border-bottom: 2px solid #ebeef0;
+                            .Topic {
+                                font-size: 13px;
+                                font-weight: 400;
+                                font-stretch: 100%;
+                                color: #5b7083;
+                                margin: 3px 0px;
+                                text-transform: uppercase;
+                            }
+                            .Headline {
+                                font-size: 15px;
+                                font-weight: 800;
+                                margin: 10px 0px;
+                            }
+                            .CoverImage {
+                                img {
+                                    width: 85px;
+                                    height: 85px;
+                                    border-radius: 1em;
+                                }
+                            }
+                        }
+                        .Footer {
+                            padding: 10px;
+                            a {
+                                text-decoration: none;
+                                cursor: pointer;
+                                color: #1da1f2;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .Topics {
+                        background-color: #ffffff;
+                        margin-bottom: 5px;
+                        .Heading {
+                            padding: 0px 10px;
+                            height: 50px;
+                            border-top: 1px solid #ebeef0;
+                            border-bottom: 1px solid #ebeef0;
+                            background-color: #ffffff;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
                             .Icon {
                                 display: block;
                                 padding-right: 10px;
                                 svg {
-                                    width: 25px;
-                                    height: 25px;
+                                    width: 23px;
+                                    height: 20px;
                                     fill: #1da1f2;
                                 }
                             }
@@ -890,165 +894,190 @@
                                 font-size: 18px;
                             }
                         }
-                        .Button {
+                        .Bottom {
+                            padding: 0px 10px;
+                            height: 50px;
+                            border-top: 1px solid #ebeef0;
+                            border-bottom: 1px solid #ebeef0;
                             display: flex;
+                            justify-content: space-between;
                             align-items: center;
-
-                            button {
-                                cursor: pointer;
-                                padding: 5px 15px;
-                                border: 1px solid #1da1f2;
-                                border-radius: 2em;
-                                background-color: #1a91da;
-                                color: #f6f5fe;
-                                font-weight: 800;
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                    .TweetItem {
-                        border-bottom: 1px solid #ebeef0;
-                        padding: 10px 15px;
-                        .TweetExtraInfo {
-                            padding-left: 40px;
-                            margin-top: 3px;
-                            .TweetExtraText {
-                                font-size: 13px;
-                                color: #5b7083;
+                            .Right {
                                 display: flex;
-                                align-items: center;
-                                margin-bottom: 8px;
-                            }
-                            i {
-                                width: 13px;
-                                height: 13px;
-                                margin-right: 8px;
-                            }
-                        }
-                        .TweetContent {
-                            display: flex;
-                            .TweetItemDp {
-                                display: flex;
-                                justify-content: center;
-                                margin-right: 5px;
-
-                                img {
-                                    width: 49px;
-                                    height: 49px;
-                                    border-radius: 50%;
-                                    &:hover {
-                                        cursor: pointer;
-                                        filter: brightness(0.9);
+                                .Icon {
+                                    display: block;
+                                    padding-right: 10px;
+                                    svg {
+                                        width: 25px;
+                                        height: 25px;
+                                        fill: #1da1f2;
                                     }
                                 }
+                                .Text {
+                                    font-weight: 800;
+                                    font-size: 18px;
+                                }
                             }
-                            .TweetItemContentColumn {
-                                width: 100%;
-                                padding-left: 5px;
+                            .Button {
+                                display: flex;
+                                align-items: center;
 
-                                .TweetTop {
-                                    font-size: 14px;
-                                    .Sender {
-                                        display: inline-flex;
+                                button {
+                                    cursor: pointer;
+                                    padding: 5px 15px;
+                                    border: 1px solid #1da1f2;
+                                    border-radius: 2em;
+                                    background-color: #1a91da;
+                                    color: #f6f5fe;
+                                    font-weight: 800;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        .TweetItem {
+                            border-bottom: 1px solid #ebeef0;
+                            padding: 10px 15px;
+                            .TweetExtraInfo {
+                                padding-left: 40px;
+                                margin-top: 3px;
+                                .TweetExtraText {
+                                    font-size: 13px;
+                                    color: #5b7083;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 8px;
+                                }
+                                i {
+                                    width: 13px;
+                                    height: 13px;
+                                    margin-right: 8px;
+                                }
+                            }
+                            .TweetContent {
+                                display: flex;
+                                .TweetItemDp {
+                                    display: flex;
+                                    justify-content: center;
+                                    margin-right: 5px;
+
+                                    img {
+                                        width: 49px;
+                                        height: 49px;
+                                        border-radius: 50%;
                                         &:hover {
                                             cursor: pointer;
+                                            filter: brightness(0.9);
+                                        }
+                                    }
+                                }
+                                .TweetItemContentColumn {
+                                    width: 100%;
+                                    padding-left: 5px;
+
+                                    .TweetTop {
+                                        font-size: 14px;
+                                        .Sender {
+                                            display: inline-flex;
+                                            &:hover {
+                                                cursor: pointer;
+                                                .SenderName {
+                                                    text-decoration: underline;
+                                                }
+                                            }
                                             .SenderName {
-                                                text-decoration: underline;
+                                                font-weight: 800;
+                                            }
+                                            .SenderHandle {
+                                                font-weight: 500;
+                                                color: #5b7083;
                                             }
                                         }
-                                        .SenderName {
-                                            font-weight: 800;
-                                        }
-                                        .SenderHandle {
+                                        .SendTime {
                                             font-weight: 500;
                                             color: #5b7083;
                                         }
                                     }
-                                    .SendTime {
-                                        font-weight: 500;
-                                        color: #5b7083;
-                                    }
-                                }
-                                .TweetContentDetail {
-                                    font-size: 15px;
-                                    padding: 1px 0px;
+                                    .TweetContentDetail {
+                                        font-size: 15px;
+                                        padding: 1px 0px;
 
-                                    .AttachedImage {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        img {
-                                            width: 100%;
-                                            object-fit: cover;
+                                        .AttachedImage {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
                                             border-radius: 1em;
+                                            img {
+                                                width: 100%;
+                                                object-fit: cover;
+                                                border-radius: 1em;
+                                            }
                                         }
-                                    }
-                                    .AttachedImage2 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        flex-flow: wrap;
-                                        justify-content: space-between;
-                                        img {
-                                            width: calc(50% - 1px);
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .AttachedImage3 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        flex-flow: wrap;
-                                        img {
-                                            width: calc(50% - 1px);
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .AttachedImage4 {
-                                        height: 285.5px;
-                                        overflow: hidden;
-                                        margin-top: 10px;
-                                        border-radius: 1em;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        flex-flow: wrap;
-                                        img {
-                                            width: calc(50% - 2px);
-                                            height: 50%;
-                                            margin: 1px;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-                                .TweetActions {
-                                    padding: 0px 100px 10px 0px;
-                                    margin-top: 10px;
-                                    .Actions {
-                                        list-style: none;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        padding-left: 0px;
-                                        .ActionItem {
+                                        .AttachedImage2 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
                                             display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            .Text {
-                                                font-size: 13px;
-                                                color: #5b7083;
+                                            flex-flow: wrap;
+                                            justify-content: space-between;
+                                            img {
+                                                width: calc(50% - 1px);
+                                                object-fit: cover;
                                             }
-                                            span {
-                                                margin: 0px 5px;
+                                        }
+                                        .AttachedImage3 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            flex-flow: wrap;
+                                            img {
+                                                width: calc(50% - 1px);
+                                                object-fit: cover;
                                             }
-                                            svg {
-                                                width: 18px;
-                                                height: 18px;
-                                                display: inline;
+                                        }
+                                        .AttachedImage4 {
+                                            height: 285.5px;
+                                            overflow: hidden;
+                                            margin-top: 10px;
+                                            border-radius: 1em;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            flex-flow: wrap;
+                                            img {
+                                                width: calc(50% - 2px);
+                                                height: 50%;
+                                                margin: 1px;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+                                    .TweetActions {
+                                        padding: 0px 100px 10px 0px;
+                                        margin-top: 10px;
+                                        .Actions {
+                                            list-style: none;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            padding-left: 0px;
+                                            .ActionItem {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                .Text {
+                                                    font-size: 13px;
+                                                    color: #5b7083;
+                                                }
+                                                span {
+                                                    margin: 0px 5px;
+                                                }
+                                                svg {
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    display: inline;
+                                                }
                                             }
                                         }
                                     }
@@ -1961,7 +1990,7 @@
         .MessagesPage {
             display: flex;
             .main {
-                width: 378px;
+                width: 388px;
                 border-right: 1px solid #ebeef0;
                 border-left: 1px solid #ebeef0;
                 box-sizing: border-box;
@@ -1970,83 +1999,148 @@
                 .PageTop {
                     border-bottom: 1px solid #bbb;
                 }
-                .SubAction {
-                    display: flex;
-                    justify-content: space-between;
-                    font-size: 15px;
-                    align-items: center;
-                    height: 30px;
-                    border-bottom: 1px solid #ebeef0;
-                    padding: 10px;
-                    &:hover {
-                        background-color: #f7f9fa;
-                    }
-                    .Link {
-                        text-decoration: none;
-
-                        cursor: pointer;
+                .PageContentRight {
+                    overflow-y: scroll;
+                    height: calc(100vh - 55px);
+                    .SubAction {
+                        display: flex;
+                        justify-content: space-between;
                         font-size: 15px;
-                        line-height: 15px;
+                        align-items: center;
+                        height: 30px;
+                        border-bottom: 1px solid #ebeef0;
+                        padding: 10px;
                         &:hover {
+                            background-color: #f7f9fa;
+                        }
+                        .Link {
                             text-decoration: none;
+
+                            cursor: pointer;
+                            font-size: 15px;
+                            line-height: 15px;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            &:active,
+                            &:visited {
+                                color: #000;
+                            }
                         }
-                        &:active,
-                        &:visited {
-                            color: #000;
+                        svg {
+                            display: flex;
+                            width: 24px;
+                            height: 24px;
                         }
                     }
-                    svg {
-                        display: flex;
-                        width: 24px;
-                        height: 24px;
-                    }
-                }
-                .SearchContainer {
-                    padding: 10px 10px 0px 10px;
-                    border-bottom: 1px solid #e6f5fe;
-                    .Search {
-                        border: none;
-                        width: 100%;
-                        overflow-x: hidden;
-                        height: 37px;
-                        display: flex;
-                        border-radius: 2em;
-                        font-size: 15px;
-                        margin-bottom: 10px;
-                        &:focus-within{
-                            background-color: #ffffff;
-                            border: 1px solid #1da1f2;
-                            height: 35px;
-                            width: calc(100% - 2px);
-                            input,
-                            .SearchButton {
-                                background-color: #ffffff !important;
-                                span {
+                    .SearchContainer {
+                        padding: 10px 10px 0px 10px;
+                        border-bottom: 1px solid #e6f5fe;
+                        .Search {
+                            border: none;
+                            width: 100%;
+                            overflow-x: hidden;
+                            height: 37px;
+                            display: flex;
+                            border-radius: 2em;
+                            font-size: 15px;
+                            margin-bottom: 10px;
+                            &:focus-within {
+                                background-color: #ffffff;
+                                border: 1px solid #1da1f2;
+                                height: 35px;
+                                width: calc(100% - 2px);
+                                input,
+                                .SearchButton {
                                     background-color: #ffffff !important;
+                                    span {
+                                        background-color: #ffffff !important;
+                                        svg {
+                                            fill: #1a91da !important;
+                                        }
+                                    }
+                                }
+                            }
+                            input {
+                                width: 100%;
+                                overflow: hidden;
+                                border: none;
+                                font-size: 15px;
+                                outline: none;
+                            }
+                            .SearchButton {
+                                padding: 10px 5px;
+                                display: flex;
+                                span {
+                                    margin-left: 8px;
+                                    width: 22.5px;
+                                    color: #ffffff;
+                                    height: 22.5px;
                                     svg {
-                                        fill: #1a91da !important;
+                                        width: 18px;
+                                        height: 18px;
                                     }
                                 }
                             }
                         }
-                        input {
-                            width: 100%;
-                            overflow: hidden;
-                            border: none;
-                            font-size: 15px;
-                            outline: none;
-                        }
-                        .SearchButton {
-                            padding: 10px 5px;
-                            display: flex;
-                            span {
-                                margin-left: 8px;
-                                width: 22.5px;
-                                color: #ffffff;
-                                height: 22.5px;
-                                svg {
-                                    width: 18px;
-                                    height: 18px;
+                    }
+                    .MessagesBox {
+                        width: 376px;
+                        .TweetItem {
+                            border-bottom: 1px solid #ebeef0;
+                            padding: 10px 15px;
+                            .TweetContent {
+                                display: flex;
+                                .TweetItemDp {
+                                    display: flex;
+                                    justify-content: center;
+
+                                    img {
+                                        width: 49px;
+                                        height: 49px;
+                                        border-radius: 50%;
+                                        margin-right: 5px;
+                                        &:hover {
+                                            cursor: pointer;
+                                            filter: brightness(0.9);
+                                        }
+                                    }
+                                }
+                                .TweetItemContentColumn {
+                                    width: 100%;
+                                    .TweetTop {
+                                        font-size: 14px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .Sender {
+                                            display: inline-flex;
+                                            &:hover {
+                                                cursor: pointer;
+                                                .SenderName {
+                                                    text-decoration: underline;
+                                                }
+                                            }
+                                            .SenderName {
+                                                font-weight: 800;
+                                            }
+                                            .SenderHandle {
+                                                font-weight: 500;
+                                                color: #5b7083;
+                                            }
+                                        }
+                                        .SendTime {
+                                            font-weight: 500;
+                                            color: #5b7083;
+                                        }
+                                    }
+                                    .TweetContentDetail {
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: #5b7083;
+                                        &::after {
+                                            content: "...";
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2056,6 +2150,51 @@
             .RightSide {
                 width: 600px;
                 padding: 10px 0px 0px 23px;
+                .ChatContent {
+                    display: flex;
+                    height: 100vh;
+                    width: 100%;
+                    border-right: 1px solid #ebeef0;
+                    .NoChatSelected {
+                        justify-content: center;
+                        align-items: center;
+                        align-self: center;
+                        width: 100%;
+                        text-align: center;
+                        .Head {
+                            display: flex;
+                            font-weight: 800;
+                            font-size: 19px;
+                            align-self: center;
+                            justify-content: center;
+                            margin-bottom: 10px;
+                        }
+                        .Bottom {
+                            font-size: 15px;
+                            font-weight: 300;
+                            color: #5b7083;
+                        }
+                        .NewMessageBtn {
+                            display: inline-flex;
+                            justify-content: center;
+                            width: 100%;
+                            button {
+                                padding: 10px 20px;
+                                margin: 15px 10px;
+                                width: 170px;
+                                border-radius: 25px;
+                                background: #33a1f2;
+                                border: none;
+                                color: #fff;
+                                font-size: 15px;
+                                font-weight: 700;
+                                overflow: auto;
+                                outline: none;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
             }
             .TweetForm {
                 width: 100%;

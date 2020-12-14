@@ -17,10 +17,12 @@ const Explore = (props) => {
                     <div className="Head">
                         <SearchBox Icon={<SearchIcon />} placholder="Search Twitter" />
                     </div>
+                    
                     <div className="right-icon">
                         <CogIcon />
                     </div>
                 </section>
+                <div className="PageContent">
                 <section>
                     <div className="TopHeader">
                         <img src="/images/post-media1.jpg" />
@@ -89,6 +91,7 @@ const Explore = (props) => {
                     </div>
                 </section>
                 <div className="separator-grey"></div>
+                </div>
             </div>
             <div className="RightSide">
                 <FollowSuggestions />
