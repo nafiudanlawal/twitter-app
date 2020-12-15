@@ -2150,7 +2150,7 @@
                                         white-space: nowrap;
                                         &::after {
                                             content: "...";
-                                        }
+                                        }                                        
                                     }
                                 }
                             }
@@ -2204,6 +2204,32 @@
                                 box-shadow: none;
                             }
                         }
+                    }
+                    .ChatBox{
+                        flex-direction: row-reverse;
+                        .ChatContainer{
+                            width: 100%;
+                            margin: 5px 0px;
+                            .OutMail{
+                                padding: 10px;
+                                border-radius: 1em;
+                                background-color: #ebeef0;
+                                display: flex;
+                                height: min-content;
+                                width: min-content;
+                                color: #000;
+                            }
+                            .ByUser{
+                                padding: 10px;
+                                border-radius: 1em;
+                                background-color: #33a1f2;
+                                display: flex;
+                                width: min-content;
+                                height: min-content;
+                                color: #ffffff;
+                            }
+                        }
+                        
                     }
                 }
             }

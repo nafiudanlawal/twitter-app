@@ -59,7 +59,18 @@ const Messages = props => {
                     <Switch>
                         <Route path="/messages/:id">
                             <div className="ChatBox">
-                                Chat Selected
+                                <div className="ChatContainer">
+                                    <div className="OutMail">
+                                        Thanks fam
+                                    </div>
+                                </div>
+                                <div className="ChatContainer">
+                                    <div className="ByUser">
+                                        Hey Man
+                                        Did you get to the certification phase
+                                        I just got my email
+                                    </div>
+                                </div>
                             </div>
                         </Route>
                         <Route path="/messages">
@@ -68,7 +79,7 @@ const Messages = props => {
                     </Switch>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 const NoChatSelected = props => {
