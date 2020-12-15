@@ -13,7 +13,7 @@ const Messages = props => {
                 <PageTop Text="Messages" Icon={MessagePlusIcon} />
 
                 <Switch>
-                    <Route path="/messages" exact={true}>
+                    <Route path="/messages">
                         <div className="PageContentRight">
                             <div className="SubAction">
                                 <Link className="Link" to="/messages/requests">Messages requests</Link>
@@ -56,7 +56,16 @@ const Messages = props => {
             </div>
             <div className="RightSide">
                 <div className="ChatContent">
-                    {(props.Chatid == undefined) ? <NoChatSelected /> : "Chat Selected"}
+                    <Switch>
+                        <Route path="/messages/:id">
+                            <div className="ChatBox">
+                                Chat Selected
+                            </div>
+                        </Route>
+                        <Route path="/messages">
+                            <NoChatSelected />
+                        </Route>
+                    </Switch>
                 </div>
             </div>
         </div>

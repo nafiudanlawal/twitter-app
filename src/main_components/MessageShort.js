@@ -1,37 +1,32 @@
 
-import { ReactComponent as CommentIcon } from "../icons/comment.svg";
-import { ReactComponent as RetweetIcon } from "../icons/retweet.svg";
-import { ReactComponent as LikeIcon } from "../icons/heart.svg";
-import { ReactComponent as ShareIcon } from "../icons/share.svg";
-import TweetInfoTop from "./TweetInfoTop";
-import AttachedImages from "./AttachedImages";
-import UserProfileModal from "./UserInfoModal";
+import { Link } from "react-router-dom";
 
 
-
-const MessageShort = ({ Content = "Kind of It's the project I'm working on at work", sender = { handle: "@nafiudanlawal", name: "Nafiu Lawal" }, time = 'Dec 13' }) => {
+const MessageShort = ({ Content = "Kind of It's the project I'm working on at work", sender = { handle: "@nafiudanlawal", name: "Nafiu Lawal", id: 15 }, time = 'Dec 13' },) => {
     const { useState } = require("react");
     const [myText, setMyText] = useState("");
     return (
-        <article className="TweetItem">
-            <div className="TweetContent">
-                <div className="TweetItemDp">
-                    <img src="/images/dp-placeholder.jpg" alt="dp" />
-                </div>
-                <div className="TweetItemContentColumn">
-                    <div className="TweetTop">
-                        <div className="Sender">
-                            <span className="SenderName">{sender.name}</span> &nbsp;
+        <article className="MessageItem">
+            <Link className="LinkDiv" to={`/messages/${sender.id}`}>
+                <div className="MessageContent">
+                    <div className="MessageItemDp">
+                        <img src="/images/dp-placeholder.jpg" alt="dp" />
+                    </div>
+                    <div className="MessageItemContentColumn">
+                        <div className="MessageTop">
+                            <div className="Sender">
+                                <span className="SenderName">{sender.name}</span> &nbsp;
                             <span className="SenderHandle">{sender.handle}</span>&nbsp;&nbsp;
                         </div>
-                        <span className="SendTime"> {time}</span>
-                    </div>
-                    <div className="TweetContentDetail">
-                        {Content}
+                            <span className="SendTime"> {time}</span>
+                        </div>
+                        <div className="MessageContentDetail">
+                            {Content}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <>{myText}</>
+                <>{myText}</>
+            </Link>
         </article>
     );
 }
