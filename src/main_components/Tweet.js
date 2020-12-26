@@ -38,7 +38,7 @@ const Tweet = ({ Content = "Sample Contect Text", type, sender = { handle: "nafi
                         </div>
                         <span className="SendTime">· {time}</span>
                     </div>
-                    {ReplyTo}
+                    {<>ReplyTo</>}
                     <div className="TweetContentDetail">
 
                         {Content}

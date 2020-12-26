@@ -1990,7 +1990,7 @@
         .MessagesPage {
             display: flex;
             .main {
-                width: 388px;
+                width: 378px;
                 border-right: 1px solid #ebeef0;
                 border-left: 1px solid #ebeef0;
                 box-sizing: border-box;
@@ -2150,7 +2150,7 @@
                                         white-space: nowrap;
                                         &::after {
                                             content: "...";
-                                        }                                        
+                                        }
                                     }
                                 }
                             }
@@ -2160,7 +2160,6 @@
             }
             .RightSide {
                 width: 600px;
-                padding: 10px 0px 0px 23px;
                 .ChatContent {
                     display: flex;
                     height: 100vh;
@@ -2205,31 +2204,271 @@
                             }
                         }
                     }
-                    .ChatBox{
+                    .ChatBox {
                         flex-direction: row-reverse;
-                        .ChatContainer{
-                            width: 100%;
-                            margin: 5px 0px;
-                            .OutMail{
-                                padding: 10px;
-                                border-radius: 1em;
-                                background-color: #ebeef0;
-                                display: flex;
-                                height: min-content;
-                                width: min-content;
-                                color: #000;
-                            }
-                            .ByUser{
-                                padding: 10px;
-                                border-radius: 1em;
-                                background-color: #33a1f2;
-                                display: flex;
-                                width: min-content;
-                                height: min-content;
-                                color: #ffffff;
+                        width: 100%;
+                        .ChatBoxInnerWrapper {
+                            height: calc(100vh - 115px);
+                            overflow-y: scroll;
+                            .ChatContainer {
+                                width: 100%;
+                                margin: 5px 0px;
+                                padding-top: 20px;
+                                .InMessageWrapper {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    .Message {
+                                        .Content {
+                                            display: flex;
+                                        }
+                                        .Time {
+                                            margin-left: 60px;
+                                            font-size: 13px;
+                                            margin-top: 5px;
+                                            margin-bottom: 10px;
+                                            color: #5b7083;
+                                        }
+                                    }
+                                    .InMessage {
+                                        padding: 10px;
+                                        border-radius: 1em;
+                                        background-color: #ebeef0;
+                                        display: flex;
+                                        height: min-content;
+                                        width: min-content;
+                                        color: #000;
+                                    }
+                                    .dp {
+                                        padding: 0px 10px;
+                                        display: flex;
+                                        align-items: center;
+                                        img {
+                                            width: 39px;
+                                            height: 39px;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                }
+                                .ByUserWrapper {
+                                    display: flex;
+                                    justify-content: flex-end;
+
+                                    .ByUser {
+                                        margin-right: 15px;
+                                        padding: 10px;
+                                        border-radius: 1em;
+                                        background-color: #33a1f2;
+                                        display: flex;
+                                        max-width: 70%;
+                                        height: min-content;
+                                        color: #ffffff;
+                                    }
+                                }
                             }
                         }
-                        
+                        .SenderTop {
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #ebeef0;
+                            padding: 8.5px 0px;
+                            .UserInfo {
+                                padding-left: 15px;
+                                display: flex;
+                                .dp {
+                                    padding: 0px 10px;
+                                    img {
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .Content {
+                                    .Name {
+                                        color: #000000;
+                                        font-weight: 800;
+                                        font-size: 19px;
+                                    }
+                                    .Handle {
+                                        color: #5b7083;
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                            .Icon {
+                                width: 37px;
+                                height: 37px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                svg {
+                                    fill: #33a1f2;
+                                    display: block;
+                                    width: 23px;
+                                    height: 23px;
+                                }
+                                &:hover {
+                                    background-color: #e6f5fe;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                        .SenderProfile {
+                            padding: 15px;
+
+                            .Top {
+                                display: flex;
+                                justify-content: center;
+                                .Name {
+                                    color: #0f1419;
+                                    font-weight: 800;
+                                    font-size: 15px;
+                                }
+                                .Handle {
+                                    color: #5b7083;
+                                    font-size: 13px;
+                                }
+                            }
+                            .ProfileDescription {
+                                font-size: 15px;
+                            }
+                            .Bottom {
+                                .StatsWrapper {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    .Followers,
+                                    .Following {
+                                        .Stats {
+                                            margin-right: 5px;
+                                            font-size: 15px;
+                                            font-weight: 800;
+                                        }
+                                        .Text {
+                                            color: #5b7083;
+                                            font-size: 15px;
+                                        }
+                                        margin: 0px 10px;
+                                    }
+                                }
+                                .Join {
+                                    display: flex;
+                                    justify-content: center;
+                                    margin-top: 5px;
+                                    .Icon {
+                                        margin-right: 5px;
+                                        svg {
+                                            width: 18.5px;
+                                            height: 18.5px;
+                                            display: flex;
+                                        }
+                                    }
+                                    .Date {
+                                        font-size: 15px;
+                                        color: #5b7083;
+                                    }
+                                }
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid #ebeef0;
+                            }
+                        }
+
+                        .SendMessageFormWrapper {
+                            z-index: 9999;
+                            width: 100%;
+                            border-top: 1px solid #ebeef0;
+                            padding-top: 10px;
+                            margin: 0px 3px ;
+                            .SendMessageForm {
+                                display: flex;
+                                .Icons {
+                                    display: flex;
+                                    
+                                    .Icon {
+                                        width: 35px;
+                                        height: 35px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        svg {
+                                            fill: #33a1f2;
+                                            display: block;
+                                            width: 22.5px;
+                                            height: 22.5px;
+                                        }
+                                        &:hover {
+                                            background-color: #e6f5fe;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                }
+                                .Input{
+                                    width: 80%;
+                                    background-color: #fff;
+                                    .MessageInput {
+                                        border: 1px solid #1da1f2;
+                                        width: 100%;
+                                        height: 2.2em;
+                                        overflow-x: hidden;
+                                        display: flex;
+                                        border-radius: 2em;
+                                        font-size: 15px;
+                                        margin-bottom: 10px;
+                                        input {
+                                            padding-left:15px;
+                                            width: 100%;
+                                            overflow: hidden;
+                                            border: none;
+                                            font-size: 15px;
+                                            outline: none;
+                                        }
+                                        .MessageButton {
+                                            padding: 3px 5px;
+                                            display: flex;
+                                            align-items: center;
+                                            span {
+                                                margin-left: 8px;
+                                                width: 22.5px;
+                                                color: #ffffff;
+                                                height: 22.5px;
+                                                padding: 5px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                svg {
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    fill: #1da1f2;
+                                                }
+                                                &:hover {
+                                                    background-color: #e6f5fe;
+                                                    border-radius: 50%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .FormSubmit {
+                                    width: 35px;
+                                    height: 35px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-left: 10px;
+                                    svg {
+                                        display: flex;
+                                        width: 23px;
+                                        height: 23px;
+                                        fill: #1a91da;
+                                    }
+                                    &:hover {
+                                        background-color: #e6f5fe;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            
+                        }
                     }
                 }
             }
