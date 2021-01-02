@@ -1,5 +1,8 @@
 @import "media-queries";
 @import "base";
+html{
+    scroll-behavior: smooth;
+}
 .App {
     display: flex;
     height: 100vh;
