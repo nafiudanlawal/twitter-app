@@ -3,11 +3,16 @@
 This project was a side project of mine to recreate twitter web's frontend with ReactJS. 
 This project recreates the Home page, Notifications Page, Messages Page and the Explore page from twitter web.
 
+## Installation & Usage
+* Clone repo from https://github.com/nafiudanlawal/twitter-app
+* Goto repo directory
+* Run `npm i`
+* Run `npm start`
 
-## Main Packages Used
-### React Dom
-### React Router
-### Sass
+## Built With
+* React Dom
+* React Router
+* Sass
 
 
 ## Available Scripts
